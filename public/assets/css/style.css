@@ -545,9 +545,12 @@ button,
   position: fixed;
   bottom: 30px;
   right: 30px;
-  -webkit-transition: background-color .3s,  opacity .5s, visibility .5s;
-  -o-transition: background-color .3s,  opacity .5s, visibility .5s;
-  transition: background-color .3s,  opacity .5s, visibility .5s;
+  -webkit-transition: background-color .3s, 
+ opacity .5s, visibility .5s;
+  -o-transition: background-color .3s, 
+ opacity .5s, visibility .5s;
+  transition: background-color .3s, 
+ opacity .5s, visibility .5s;
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
@@ -4021,3 +4024,8 @@ blockquote {
     width: 100%;
     margin-right: 0;
     margin-bottom: 15px; } }
+    .member-details {
+      background-color: rgb(247,107,106);
+      padding: 20px 15px;
+      width: 100%;
+    }

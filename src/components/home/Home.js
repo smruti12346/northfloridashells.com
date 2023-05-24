@@ -1,6 +1,8 @@
 import React from 'react'
+import ImageSliderCard from './ImageSliderCard'
 
 function Home() {
+  
   return (
     <React.Fragment>
     <main id="MainContent" className="content-for-layout">
@@ -360,90 +362,7 @@ function Home() {
      <div className="section-header text-center">
        <h2 className="section-heading">Latest blogs</h2>
      </div>
-     <div className="article-card-container position-relative">
-       <div className="common-slider" data-slick="{
-                         &quot;slidesToShow&quot;: 3, 
-                         &quot;slidesToScroll&quot;: 1,
-                         &quot;dots&quot;: false,
-                         &quot;arrows&quot;: true,
-                         &quot;responsive&quot;: [
-                           {
-                             &quot;breakpoint&quot;: 1281,
-                             &quot;settings&quot;: {
-                               &quot;slidesToShow&quot;: 2
-                             }
-                           },
-                           {
-                             &quot;breakpoint&quot;: 602,
-                             &quot;settings&quot;: {
-                               &quot;slidesToShow&quot;: 1
-                             }
-                           }
-                         ]
-                     }">
-         <div className="article-slick-item" data-aos="fade-up" data-aos-duration={700}>
-           <div className="article-card">
-             <a className="article-card-img-wrapper" href="article.html">
-               <img src="assets/img/blog/bag-1.jpg" alt="img" className="article-card-img rounded" />
-             </a>
-             <p className="article-card-published text_12">30 July 2022</p>
-             <h2 className="article-card-heading heading_18">
-               <a className="heading_18" href="article.html">
-                 The fairycore trend is a 2022 fashion hit as fairies.
-               </a>
-             </h2>
-             <a className="article-card-read-more text_14 link-underline" href="article.html">Read
-               More</a>
-           </div>
-         </div>
-         <div className="article-slick-item" data-aos="fade-up" data-aos-duration={700}>
-           <div className="article-card">
-             <a className="article-card-img-wrapper" href="article.html">
-               <img src="assets/img/blog/bag-2.jpg" alt="img" className="article-card-img rounded" />
-             </a>
-             <p className="article-card-published text_12">30 July 2022</p>
-             <h2 className="article-card-heading heading_18">
-               <a className="heading_18" href="article.html">
-                 TOP 10 most fahionable ladies bag on super sale!
-               </a>
-             </h2>
-             <a className="article-card-read-more text_14 link-underline" href="article.html">Read
-               More</a>
-           </div>
-         </div>
-         <div className="article-slick-item" data-aos="fade-up" data-aos-duration={700}>
-           <div className="article-card">
-             <a className="article-card-img-wrapper" href="article.html">
-               <img src="assets/img/blog/bag-3.jpg" alt="img" className="article-card-img rounded" />
-             </a>
-             <p className="article-card-published text_12">30 July 2022</p>
-             <h2 className="article-card-heading heading_18">
-               <a className="heading_18" href="article.html">
-                 Polish fashion, eco products and the national art seence.
-               </a>
-             </h2>
-             <a className="article-card-read-more text_14 link-underline" href="article.html">Read
-               More</a>
-           </div>
-         </div>
-         <div className="article-slick-item" data-aos="fade-up" data-aos-duration={700}>
-           <div className="article-card">
-             <a className="article-card-img-wrapper" href="article.html">
-               <img src="assets/img/blog/bag-2.jpg" alt="img" className="article-card-img rounded" />
-             </a>
-             <p className="article-card-published text_12">30 July 2022</p>
-             <h2 className="article-card-heading heading_18">
-               <a className="heading_18" href="article.html">
-                 Polish fashion, eco products and the national art seence.
-               </a>
-             </h2>
-             <a className="article-card-read-more text_14 link-underline" href="article.html">Read
-               More</a>
-           </div>
-         </div>
-       </div>
-       <div className="activate-arrows show-arrows-always article-arrows arrows-white" />
-     </div>
+     <ImageSliderCard/>
    </div>
  </div>
 </div>
@@ -462,62 +381,7 @@ function Home() {
        <p className="section-subheading">See how our customers styled shoe products in their foot</p>
      </div>
      <div className="instagram-container position-relative mt-48">
-       <div className="common-slider" data-slick="{
-                         &quot;slidesToShow&quot;: 4, 
-                         &quot;slidesToScroll&quot;: 1,
-                         &quot;dots&quot;: false,
-                         &quot;arrows&quot;: true,
-                         &quot;responsive&quot;: [
-                           {
-                             &quot;breakpoint&quot;: 1281,
-                             &quot;settings&quot;: {
-                               &quot;slidesToShow&quot;: 3
-                             }
-                           },
-                           {
-                             &quot;breakpoint&quot;: 768,
-                             &quot;settings&quot;: {
-                               &quot;slidesToShow&quot;: 2
-                             }
-                           }
-                         ]
-                     }">
-         <div className="instagram-slick-item" data-aos="fade-up" data-aos-duration={700}>
-           <div className="instagram-card">
-             <a className="instagram-img-wrapper" href="index-bag.html">
-               <img src="assets/img/instagram/bag1.jpg" alt="img" className="instagram-card-img rounded" />
-             </a>
-           </div>
-         </div>
-         <div className="instagram-slick-item" data-aos="fade-up" data-aos-duration={700}>
-           <div className="instagram-card">
-             <a className="instagram-img-wrapper" href="index-bag.html">
-               <img src="assets/img/instagram/bag2.jpg" alt="img" className="instagram-card-img rounded" />
-             </a>
-           </div>
-         </div>
-         <div className="instagram-slick-item" data-aos="fade-up" data-aos-duration={700}>
-           <div className="instagram-card">
-             <a className="instagram-img-wrapper" href="index-bag.html">
-               <img src="assets/img/instagram/bag3.jpg" alt="img" className="instagram-card-img rounded" />
-             </a>
-           </div>
-         </div>
-         <div className="instagram-slick-item" data-aos="fade-up" data-aos-duration={700}>
-           <div className="instagram-card">
-             <a className="instagram-img-wrapper" href="index-bag.html">
-               <img src="assets/img/instagram/bag4.jpg" alt="img" className="instagram-card-img rounded" />
-             </a>
-           </div>
-         </div>
-         <div className="instagram-slick-item" data-aos="fade-up" data-aos-duration={700}>
-           <div className="instagram-card">
-             <a className="instagram-img-wrapper" href="index-bag.html">
-               <img src="assets/img/instagram/bag2.jpg" alt="img" className="instagram-card-img rounded" />
-             </a>
-           </div>
-         </div>
-       </div>
+      <ImageSliderCard/>
        <div className="activate-arrows show-arrows-always article-arrows arrows-white" />
      </div>
    </div>
@@ -663,41 +527,7 @@ function Home() {
   </div>
 </div>
 {/* faq end */}
-  {/* newsletter start */}
-  <div className="newsletter-section mt-100 overflow-hidden">
-  <div className="newsletter-inner">
-    <div className="container">
-      <div className="newsletter-container bg-pink">
-        <div className="row align-items-center">
-          <div className="col-lg-6 col-12">
-            <div className="newsletter-content newsltter-content-1">
-              <div className="newsletter-header">
-                <p className="newsletter-subheading colored-text heading_24">News Letter</p>
-                <h2 className="newsletter-heading heading_42">Subscribe to our newsletter</h2>
-              </div>
-              <div className="newsletter-form-wrapper">
-                <form action="#" className="newsletter-form d-flex align-items-center rounded">
-                  <input className="newsletter-input bg-transparent border-0" type="email" placeholder="Enter your e-mail" autoComplete="off" />
-                  <button className="newsletter-btn rounded" type="submit">
-                    <svg width={17} height={14} viewBox="0 0 17 14" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.11539 -0.000488604L7.50417 1.99951L11.5769 5.59951L0.500001 5.59951L0.500001 8.19951L11.7049 8.19951L7.50417 11.4995L8.70513 13.9995L16.5 7.19951L9.11539 -0.000488604Z" fill="#FEFEFE" />
-                    </svg>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-6 col-12">
-            <div className="newsletter-image">
-              <img src="assets/img/newsletter/1.jpg" alt="img" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{/* newsletter end */}
+  
 
   {/* newsletter start */}
   <div className="newsletter-section mt-100 overflow-hidden">
