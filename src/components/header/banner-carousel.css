@@ -1,0 +1,36 @@
+.carousel-root {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .carousel .slider-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .carousel .slider {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .carousel .slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .carousel .control-prev.control-arrow:before,
+  .carousel .control-next.control-arrow:before {
+    color: #fff;
+    font-size: 30px;
+  }
+  
+  .carousel .control-dots .dot {
+    background-color: #fff;
+  }
+  
+  .carousel .control-dots .dot.selected {
+    background-color: #000;
+  }
+  

@@ -1,12 +1,13 @@
 import React from 'react'
 import Navbar from './Navbar'
-import Hero from './Hero'
+import BannerCarousel from './BannerCarousel'
+
 
 function Header() {
   return (
     <React.Fragment>
     <Navbar/>
-    <Hero/>
+    <BannerCarousel/>
     </React.Fragment>
   )
 }
