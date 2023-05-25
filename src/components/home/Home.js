@@ -1,5 +1,6 @@
 import React from 'react'
 import ImageSliderCard from './ImageSliderCard'
+import ImageSliderCard2 from './ImageSlider2'
 
 function Home() {
   
@@ -356,7 +357,7 @@ function Home() {
  </div>
  {/* shop by category end */}
  {/* latest blog start */}
- <div className="latest-blog-section bg-pink mt-100 pt-100 pb-100 overflow-hidden home-section">
+ <div className="latest-blog-section bg-pink mt-100 mb-50 pt-100 pb-100 overflow-hidden home-section">
  <div className="latest-blog-inner">
    <div className="container">
      <div className="section-header text-center">
@@ -370,7 +371,7 @@ function Home() {
  {/* instagram start */}
  <div className="instagram-section mt-100 overflow-hidden home-section">
  <div className="instagram-inner">
-   <div className="container">
+ 
      <div className="section-header text-center">
        <div className="section-icon">
          <svg width={54} height={54} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -380,13 +381,13 @@ function Home() {
        <h2 className="section-heading">Bag &amp; Water pot</h2>
        <p className="section-subheading">See how our customers styled shoe products in their foot</p>
      </div>
-     <div className="instagram-container position-relative mt-48">
-      <ImageSliderCard/>
+     <div className=" instagram-container position-relative " >
+      <ImageSliderCard2/>
        <div className="activate-arrows show-arrows-always article-arrows arrows-white" />
      </div>
    </div>
  </div>
-</div>
+
 {/* instagram end */}
   {/* faq start */}
   <div className="faq-section mt-100 overflow-hidden">
