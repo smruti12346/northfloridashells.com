@@ -54,7 +54,7 @@ function Home() {
      </div>
      <div className="grid-container shop-category-inner">
        <a className="grid-item grid-item-1 position-relative rounded mt-0 d-flex" href="collection-left-sidebar.html">
-         <img className="banner-img" src="assets/img/products/shell/Florida Purple Barnacle Cluster.jpg" alt="banner-1" />
+         <img className="banner-img" src="assets/img/products/shell/ss1091.jpg" alt="banner-1" />
          <div className="content-absolute content-slide">
            <div className="container height-inherit d-flex">
              <div className="content-box banner-content p-4">
@@ -82,7 +82,7 @@ function Home() {
          </div>
        </a>
        <a className="grid-item grid-item-3 position-relative rounded mt-0 d-flex" href="collection-left-sidebar.html">
-         <img className="banner-img" src="assets/img/products/shell/Reef Rock Coral.jpg" alt="banner-1" />
+         <img className="banner-img" src="assets/img/products/shell/Irish Flat Scallop Shells.jpg" alt="banner-1" />
          <div className="content-absolute content-slide">
            <div className="container height-inherit d-flex justify-content-end text-end">
              <div className="content-box banner-content p-4">
@@ -110,7 +110,7 @@ function Home() {
          </div>
        </a>
        <a className="grid-item grid-item-5 position-relative rounded mt-0 d-flex" href="collection-left-sidebar.html">
-         <img className="banner-img" src="assets/img/products/shell/Aqua Blue Teal and Ice Mix Sea Glass.jpg" alt="banner-1" />
+         <img className="banner-img" src="assets/img/products/shell/Dyed Multi Color Ark Shells.jpg" alt="banner-1" />
          <div className="content-absolute content-slide">
            <div className="container height-inherit d-flex">
              <div className="content-box banner-content p-4">
@@ -222,8 +222,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                        <img className="secondary-img" src="assets/img/products/shell/FLAT TAN STARFISH.jpg" alt="product-img" />
-                        <img className="primary-img" src="assets/img/products/shell/FLAT TAN STARFISH.jpg" alt="product-img" />
+                        <img className="secondary-img" src="assets/img/products/shell/Sugar Starfish Dried.jpg" alt="product-img" />
+                        <img className="primary-img" src="assets/img/products/shell/Sugar Starfish Dried.jpg" alt="product-img" />
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>

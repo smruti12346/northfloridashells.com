@@ -10,22 +10,22 @@ const BannerCarousel= () => {
         <div className="slide">
           <img src="assets/img/slideshow/ban1.png" alt="Slide 1" />
           <div className="slide-text">
-            <h3>Slide 1 Title</h3>
-            <p>Slide 1 Description</p>
+            <h3>SEASHELLS</h3>
+           
           </div>
         </div>
         <div className="slide">
           <img src="assets/img/slideshow/ban2.png" alt="Slide 2" />
           <div className="slide-text">
-            <h3>Slide 2 Title</h3>
-            <p>Slide 2 Description</p>
+            <h3>STARFISH</h3>
+           
           </div>
         </div>
         <div className="slide">
           <img src="assets/img/slideshow/ban3.png" alt="Slide 3" />
           <div className="slide-text">
-            <h3>Slide 3 Title</h3>
-            <p>Slide 3 Description</p>
+            <h3>NAUTILUS SEASHELLS</h3>
+        
           </div>
         </div>
       </Carousel>
