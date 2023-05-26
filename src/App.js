@@ -22,7 +22,7 @@ function App() {
   })
   return (
     <React.Fragment>
-    <Router>
+    <Router basename={'/'}>
     <Header/>
     <Routes>
     <Route path='/' element={<Home/>}/>

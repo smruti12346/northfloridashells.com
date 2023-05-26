@@ -4056,3 +4056,26 @@ blockquote {
   .logo span:hover{
     color:rgb(247,107,106) ;
   }
+  .about-hero-title{
+    margin-bottom: 40px;
+  }
+  .about-hero-image{
+    margin-bottom: 40px;
+  }
+  .about{
+    margin-top: 40px;
+  }
+  .product-card img{
+    height:350px;
+    width:300px;
+  }
+  .heading_18{
+    color:rgb(247,107,106);
+    font-weight: bold;
+  }
+  .heading_16{
+    color:rgb(0,35,77);
+    font-size: 15px;
+    font-weight: bold;
+  
+  }

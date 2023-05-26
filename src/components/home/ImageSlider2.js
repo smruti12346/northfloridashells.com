@@ -19,37 +19,37 @@ const ImageSliderCard2 = () => {
     <Slider {...settings}>
     <div className='card-menu'>
       <div className="card  " >
-        <img src="assets/img/blog/bag-1.jpg" alt="Image 1" />
+        <img src="assets/img/products/shell/30+ Assorted Hermit Crab Shells.jpg" alt="Image 1" />
         
       </div>
       </div>
       <div className='card-menu'>
       <div className="card  ">
-        <img src="assets/img/blog/bag-1.jpg" alt="Image 2" />
+        <img src="assets/img/products/shell/Alphonso Urchins Dried.jpg" alt="Image 2" />
         
       </div>
       </div>
       <div className='card-menu'>
       <div className="card  ">
-      <img src="assets/img/blog/bag-1.jpg" alt="Image 2" />
+      <img src="assets/img/products/shell/Aqua Blue Teal and Ice Mix Sea Glass.jpg" alt="Image 2" />
       
     </div>
     </div>
     <div className='card-menu'>
     <div className="card  ">
-    <img src="assets/img/blog/bag-1.jpg" alt="Image 2" />
+    <img src="assets/img/products/shell/BAKING SCALLOP CLAMS SEAFOOD COOKING SHELLS.jpg" alt="Image 2" />
     
   </div>
   </div>
   <div className='card-menu'>
   <div className="card ">
-  <img src="assets/img/blog/bag-1.jpg" alt="Image 2" />
+  <img src="assets/img/products/shell/Florida Purple Barnacle Cluster.jpg" alt="Image 2" />
  
 </div>
 </div>
 <div className='card-menu'>
 <div className="card  ">
-<img src="assets/img/blog/bag-1.jpg" alt="Image 2" />
+<img src="assets/img/products/shell/Reef Rock Coral.jpg" alt="Image 2" />
 
 </div>
 </div>
