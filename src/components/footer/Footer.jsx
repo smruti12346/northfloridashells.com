@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -41,9 +42,9 @@ function Footer() {
                 <ul className="footer-menu list-unstyled mb-0 d-md-block">
                   <li className="footer-menu-item"><a href="about-us.html">Brand catalog</a></li>
                   <li className="footer-menu-item"><a href="about-us.html">Discount codes</a></li>
-                  <li className="footer-menu-item"><a href="collection-left-sidebar.html">Furniture</a></li>
-                  <li className="footer-menu-item"><a href="collection-left-sidebar.html">Sofa</a></li>
-                  <li className="footer-menu-item"><a href="collection-left-sidebar.html">Chair</a></li>
+                  <li className="footer-menu-item"><a href="collection-left-sidebar.html">Products</a></li>
+                  <li className="footer-menu-item"><a href="collection-left-sidebar.html">Offer</a></li>
+                  <li className="footer-menu-item"><a href="collection-left-sidebar.html">Free Delivery</a></li>
                 </ul>
               </div>
             </div>
@@ -58,7 +59,7 @@ function Footer() {
                   </span>
                 </h4>
                 <ul className="footer-menu list-unstyled mb-0 d-md-block">
-                  <li className="footer-menu-item"><a href="faq.html">Chair</a></li>
+                  <li className="footer-menu-item"><a href="faq.html">FAQ</a></li>
                   <li className="footer-menu-item"><a href="about-us.html">Privacy policy</a></li>
                   <li className="footer-menu-item"><a href="about-us.html">Support</a></li>
                   <li className="footer-menu-item"><a href="contact.html">Contact</a></li>
@@ -68,7 +69,9 @@ function Footer() {
             <div className="col-xl-4 col-lg-5 col-md-6 col-12 footer-widget">
               <div className="footer-widget-inner">
                 <h4 className="footer-logo">
-                  <a href="/"><img src="assets/img/logo-accent.png" alt="bisum" /></a>
+                <NavLink to="/" className="logo-main logo">North <span>&nbsp;Florida&nbsp;</span> Shell
+                { /* <img src="assets/img/logo.png" loading="lazy" alt="bisum" />*/}
+                </NavLink>
                 </h4>
                 <div className="footer-newsletter">
                   <p className="footer-text mb-3">Stay up to date with all the news.</p>
@@ -132,7 +135,7 @@ function Footer() {
             <li className="footer-menu-item"><a href="about-us.html">Privacy policy</a></li>
             <li className="footer-menu-item"><a href="about-us.html">Terms &amp; Conditions</a></li>
           </ul>
-          <p className="copyright footer-text">©<span className="current-year" /> Spree Themes.</p>
+          <p className="copyright footer-text">©<span className="current-year" /> 2023 North Florida Shells. All Rights Reserved. Managed by A New Life Tomorrow ENT LLC.</p>
         </div>
       </div>
     </div>

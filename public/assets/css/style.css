@@ -4045,3 +4045,14 @@ blockquote {
       border-radius: 12px;
       padding: 13px 13px;
   }
+
+  .logo{
+    font-size: 29px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Righteous', cursive;
+    color: rgb(0,35,77);
+  }
+  .logo span:hover{
+    color:rgb(247,107,106) ;
+  }

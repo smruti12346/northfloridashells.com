@@ -15,6 +15,7 @@ import Registration from './components/login/Registration';
 import Cart from './components/products/Cart';
 import Wishlist from './components/products/Wishlist';
 import SingleProduct from './components/products/SingleProduct';
+import Blog from './components/blog/Blog'
 function App() {
   useEffect(()=>{
     AOS.init();
@@ -33,6 +34,7 @@ function App() {
     <Route path='/registration' element={<Registration/>}/>
     <Route path='/carts' element={<Cart/>}/>
     <Route path='/wishlist' element={<Wishlist/>}/>
+    <Route path='/blog' element={<Blog/>}/>
    </Routes>
     <Footer/>
     </Router>

@@ -29,26 +29,31 @@ function About() {
           <div className="col-lg-6 col-md-12 col-12">
             <div className="about-hero-content">
               <h2 className="about-hero-title">We Provide Expert Service and aim to have a long term with you</h2>
-              <p className="about-hero-subtitle">We provide a full range of front end mechanical repairs for all makes and models of cars, no matter</p>
+              <p className="about-hero-subtitle">Here at North Florida Shells, we only sell 100% real Sea Items that are #1 Quality dried sea Creatures, starfish, shell products and more.
+              We hope you enjoy shopping and buying all your starfish, collector shells, craft items and more from us.
+              Please remember that sea items are not mass produced by a machine and each item is a unique piece and has a unique character.
+              
+              No Minimum Purchase
+              We offer discounts on two or more items over $50.00 from 15% to 35% every day.</p>
               <ul className="about-hero-action p-0">
                 <li className="action-item d-flex">
                   <div className="action-count">01</div>
                   <div className="action-content">
-                    <h4 className="action-title"><a href="#">Get A Quote</a></h4>
-                    <p className="action-subtitle">Through True Rich Attended does no end it his mother since real had half every.</p>
+                    <h4 className="action-title"><a href="#">Quality</a></h4>
+                    <p className="action-subtitle">Here at North Florida Shells, we only sell 100% real Sea Items that are #1 Quality dried sea Creatures, starfish, shell products and more.</p>
                   </div>
                 </li>
                 <li className="action-item d-flex">
                   <div className="action-count">02</div>
                   <div className="action-content">
-                    <h4 className="action-title"><a href="#">Book An Appointment</a></h4>
+                    <h4 className="action-title"><a href="#">FREE SHIPPING</a></h4>
                     <p className="action-subtitle">Through True Rich Attended does no end it his mother since real.</p>
                   </div>
                 </li>
                 <li className="action-item d-flex">
                   <div className="action-count">03</div>
                   <div className="action-content">
-                    <h4 className="action-title"><a href="#">Get Your Service Done</a></h4>
+                    <h4 className="action-title"><a href="#">Damage - Returns - Refunds </a></h4>
                     <p className="action-subtitle">Ecstatic unsatiable saw his giving Remain expense you position concluded.</p>
                   </div>
                 </li>
@@ -72,8 +77,8 @@ function About() {
             <img src="assets/img/about/p1.jpg" alt="img" />
             <div className="promotional-absolute">
               <div className="promotional-content text-center">
-                <h2 className="promo-title">Serve our customers and always deliver the customer service</h2>
-                <p className="promo-subtitle">We provide a full range of front end mechanical repairs for all makes and models of cars, no matter the cause. This includes</p>
+                <h2 className="promo-title">Must-Know Facts about Clam Shells for Baking</h2>
+                <p className="promo-subtitle">Scallops clam shells for baking are pretty famous, especially when talking about seafood. But, apart from making scallop seashell crafts, the clamshells are also renowned for baking food items. </p>
               </div>
             </div>
           </div>
@@ -83,8 +88,8 @@ function About() {
             <img src="assets/img/about/p2.jpg" alt="img" />
             <div className="promotional-absolute">
               <div className="promotional-content text-center">
-                <h2 className="promo-title">To be the world’s most eader in automotive business solutions.</h2>
-                <p className="promo-subtitle">We provide a full range of front end mechanical repairs for all makes and models of cars, no matter the cause. This includes</p>
+                <h2 className="promo-title">Tips for Choosing the Best Hermit Crab Shell </h2>
+                <p className="promo-subtitle">When you domesticate a hermit crab in your house, you need to make sure that it is absolutely comfortable with the house that you are offering to him.  </p>
               </div>
             </div>
           </div>
@@ -94,8 +99,8 @@ function About() {
             <img src="assets/img/about/p3.jpg" alt="img" />
             <div className="promotional-absolute">
               <div className="promotional-content text-center">
-                <h2 className="promo-title">We value the service we provide and our loyal returning customers </h2>
-                <p className="promo-subtitle">We provide a full range of front end mechanical repairs for all makes and models of cars, no matter the cause. This includes</p>
+                <h2 className="promo-title">No Minimum Purchase </h2>
+                <p className="promo-subtitle">We offer discounts on two or more items over $50.00 from 15% to 35% every day.</p>
               </div>
             </div>
           </div>
@@ -119,7 +124,7 @@ function About() {
                   </svg>                                                
                 </div>
                 <div className="about-service-content">
-                  <h4 className="about-service-title">Convenient Service</h4>
+                  <h4 className="about-service-title">100% REAL SEA ITEMS</h4>
                   <p className="about-service-subtitle">Through True Rich Attended does no end it his mother since real had half every him end it his mother</p>
                 </div>
               </div>
@@ -132,7 +137,7 @@ function About() {
                   </svg>                                                
                 </div>
                 <div className="about-service-content">
-                  <h4 className="about-service-title">Expert Mechanics</h4>
+                  <h4 className="about-service-title">JEWELRY</h4>
                   <p className="about-service-subtitle">Through True Rich Attended does no end it his mother since real had half every him end it his mother</p>
                 </div>
               </div>
@@ -145,7 +150,7 @@ function About() {
                   </svg>                                                
                 </div>
                 <div className="about-service-content">
-                  <h4 className="about-service-title">Transparent Pricing</h4>
+                  <h4 className="about-service-title">SHIPPING MATERIALS</h4>
                   <p className="about-service-subtitle">Through True Rich Attended does no end it his mother since real had half every him end it his mother</p>
                 </div>
               </div>
@@ -160,7 +165,7 @@ function About() {
       <div className="team-section-wrapper">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="section-heading">Meet our Team</h2>
+            <h2 className="section-heading">Our Products</h2>
           </div>
           <div className="team-wrapper">
             <div className="row">
@@ -169,8 +174,8 @@ function About() {
                   <img src="assets/img/team/1.jpg" alt="img" />
                   <div className="member-absolute">
                     <div className="member-details text-center">
-                      <h4 className="member-name">Javena Melo</h4>
-                      <p className="member-desig">Founder, Director</p>
+                      <h4 className="member-name">30+ ASSORTED HERMIT CRAB SHELLS</h4>
+                      <p className="member-desig">Crab Shell</p>
                     </div>
                   </div>
                 </div>
@@ -180,8 +185,8 @@ function About() {
                   <img src="assets/img/team/2.jpg" alt="img" />
                   <div className="member-absolute">
                     <div className="member-details text-center">
-                      <h4 className="member-name">Paul Honson</h4>
-                      <p className="member-desig">Head Technician</p>
+                      <h4 className="member-name">4"+ BAKING SCALLOP CLAMS SEAFOOD -</h4>
+                      <p className="member-desig">Cooking Shell</p>
                     </div>
                   </div>
                 </div>
@@ -191,8 +196,8 @@ function About() {
                   <img src="assets/img/team/3.jpg" alt="img" />
                   <div className="member-absolute">
                     <div className="member-details text-center">
-                      <h4 className="member-name">Devon Lane</h4>
-                      <p className="member-desig">Technician</p>
+                      <h4 className="member-name">BULK LOTS OF BLEACHED WHITE KNOBBY STARFISH</h4>
+                      <p className="member-desig">Starfish</p>
                     </div>
                   </div>
                 </div>
@@ -202,8 +207,8 @@ function About() {
                   <img src="assets/img/team/4.jpg" alt="img" />
                   <div className="member-absolute">
                     <div className="member-details text-center">
-                      <h4 className="member-name">Jalen Davies</h4>
-                      <p className="member-desig">Marketing Manager</p>
+                      <h4 className="member-name">ALPHONSO URCHINS DRIED</h4>
+                      <p className="member-desig">URCHINS</p>
                     </div>
                   </div>
                 </div>
@@ -213,8 +218,8 @@ function About() {
                   <img src="assets/img/team/5.jpg" alt="img" />
                   <div className="member-absolute">
                     <div className="member-details text-center">
-                      <h4 className="member-name">Kylee Danford</h4>
-                      <p className="member-desig">Sales Manager</p>
+                      <h4 className="member-name">AQUA BLUE TEAL & ICE MIX </h4>
+                      <p className="member-desig">Sea Glass</p>
                     </div>
                   </div>
                 </div>
@@ -224,8 +229,8 @@ function About() {
                   <img src="assets/img/team/6.jpg" alt="img" />
                   <div className="member-absolute">
                     <div className="member-details text-center">
-                      <h4 className="member-name">Luisa Wilson</h4>
-                      <p className="member-desig">Support Assistant</p>
+                      <h4 className="member-name">BLACK CORAL SEA FANS</h4>
+                      <p className="member-desig">Sea Fan</p>
                     </div>
                   </div>
                 </div>

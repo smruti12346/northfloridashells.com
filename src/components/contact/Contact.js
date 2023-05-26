@@ -36,8 +36,8 @@ function Contact() {
                    </div>
                    <div className="contact-details">
                      <h2 className="contact-title">Mail Address</h2>
-                     <a className="contact-info" href="mailto:info@example.com">info@example.com</a>
-                     <a className="contact-info" href="mailto:info2@example.com">info2@example.com</a>
+                     <a className="contact-info" href="mailto:info@example.com">northfloridashells@gmail.com</a>
+                     <a className="contact-info" href="mailto:info2@example.com">northfloridashells@gmail.com</a>
                    </div>
                  </div>
                </div>
@@ -50,7 +50,9 @@ function Contact() {
                    </div>
                    <div className="contact-details">
                      <h2 className="contact-title">Office Location</h2>
-                     <p className="contact-info">2715 Ash Dr. San Jose, South Dakota 83475</p>
+                     <p className="contact-info">151 SW Churchill Way,
+                     Lake City, FL. 32025
+                     US</p>
                    </div>
                  </div>
                </div>
@@ -63,8 +65,8 @@ function Contact() {
                    </div>
                    <div className="contact-details">
                      <h2 className="contact-title">Phone Number</h2>
-                     <a className="contact-info" href="tel:(201) 555-0124">(201) 555-0124</a>
-                     <a className="contact-info" href="tel:(307) 555-0133">(307) 555-0133</a>
+                     <a className="contact-info" href="tel:(201) 555-0124">386.324.2330</a>
+                     <a className="contact-info" href="tel:(307) 555-0133">386.324.2330</a>
                    </div>
                  </div>
                </div>

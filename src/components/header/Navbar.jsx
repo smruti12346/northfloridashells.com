@@ -11,13 +11,16 @@ function Navbar() {
         <div className="col-lg-3 d-lg-block d-none">
           <div className="announcement-call-wrapper">
             <div className="announcement-call">
-              <a className="announcement-text text-white" href="tel:+1-078-2376">Call: +1 078 2376</a>
+              <a className="announcement-text text-white" href="tel:+1-078-2376">Call: 386.324.2330</a>
             </div>
           </div>
         </div>
         <div className="col-lg-6 col-12">
           <div className="announcement-text-wrapper d-flex align-items-center justify-content-center">
-            <p className="announcement-text text-white">New year sale - 30% off</p>
+            <p className="announcement-text text-white">
+           
+            You can contact us by phone- Monday - Friday
+            9:00 a.m. - 4:30 p.m.</p>
           </div>
         </div>
         <div className="col-lg-3 d-lg-block d-none">
@@ -91,8 +94,8 @@ function Navbar() {
         <div className="row align-items-center">
           <div className="col-lg-3 col-md-4 col-4">
             <div className="header-logo">
-              <NavLink to="/" className="logo-main">
-                <img src="assets/img/logo.png" loading="lazy" alt="bisum" />
+              <NavLink to="/" className="logo-main logo">North <span>&nbsp;Florida&nbsp;</span> Shell
+              { /* <img src="assets/img/logo.png" loading="lazy" alt="bisum" />*/}
               </NavLink>
             </div>
           </div>
@@ -137,77 +140,100 @@ function Navbar() {
                           <div className="submenu-transform megamenu-transform">
                             <ul className="megamenu list-unstyled">
                               <li className="menu-list-item nav-item-sub">
-                                <a className="nav-link-sub nav-text-sub" href="collection-left-sidebar.html">With Left
-                                  Sidebar</a>
+                                <a className="nav-link-sub nav-text-sub " href="collection-left-sidebar.html">DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES</a>
                               </li>
                               <li className="menu-list-item nav-item-sub">
-                                <a className="nav-link-sub nav-text-sub" href="collection-right-sidebar.html">With Right
-                                  Sidebar</a>
+                                <a className="nav-link-sub nav-text-sub" href="collection-right-sidebar.html">BULK WHOLESALE LOT SPECIALS</a>
                               </li>
                               <li className="menu-list-item nav-item-sub">
-                                <a className="nav-link-sub nav-text-sub" href="collection-left-sidebar.html">3 Column
-                                  Layout</a>
+                                <a className="nav-link-sub nav-text-sub" href="collection-left-sidebar.html">CUT AND BANDED SHELLS</a>
                               </li>
                               <li className="menu-list-item nav-item-sub">
-                                <a className="nav-link-sub nav-text-sub" href="collection-without-sidebar.html">4 Column
-                                  Layout</a>
+                                <a className="nav-link-sub nav-text-sub" href="collection-without-sidebar.html">DISPLAY STANDS</a>
                               </li>
                               <li className="menu-list-item nav-item-sub">
-                                <a className="nav-link-sub nav-text-sub" href="collection-without-sidebar.html">Without
-                                  Sidebar</a>
+                                <a className="nav-link-sub nav-text-sub" href="collection-without-sidebar.html">DRIED FISH, BLOW FISH</a>
                               </li>
+                              <li className="menu-list-item nav-item-sub">
+                              <a className="nav-link-sub nav-text-sub" href="collection-without-sidebar.html">SEA LIFE LOTS</a>
+                            </li>
+                            <li className="menu-list-item nav-item-sub">
+                            <a className="nav-link-sub nav-text-sub" href="collection-without-sidebar.html">SEAHORSE</a>
+                          </li>
+                          <li className="menu-list-item nav-item-sub">
+                            <a className="nav-link-sub nav-text-sub" href="collection-without-sidebar.html">   JEWELRY</a>
+                          </li>
+                       
                             </ul>
                           </div>
                         </li>
                         <li className="menu-list-item nav-item-sub">
                           <div className="mega-menu-header d-flex align-items-center justify-content-between">
                             <a className="nav-link-sub nav-text-sub megamenu-heading" href="collection-right-sidebar.html">
-                              PRODUCT PAGES
+                             CATAGORIES PAGES
                             </a>
                           </div>
                           <div className="submenu-transform megamenu-transform">
                             <ul className="megamenu list-unstyled">
                               <li className="menu-list-item nav-item-sub">
-                                <a className="nav-link-sub nav-text-sub" href="product.html">Simple Product</a>
+                                <a className="nav-link-sub nav-text-sub" href="product.html">FLAT, CLAM, SCALLOP, AND PECTIN SHELLS</a>
                               </li>
                               <li className="menu-list-item nav-item-sub">
-                                <a className="nav-link-sub nav-text-sub" href="product.html">Variable Product</a>
+                                <a className="nav-link-sub nav-text-sub" href="product.html">HERMIT CRAB SHELLS</a>
                               </li>
                               <li className="menu-list-item nav-item-sub">
-                                <a className="nav-link-sub nav-text-sub" href="product.html">Sale Product</a>
+                                <a className="nav-link-sub nav-text-sub" href="product.html">LARGE SEASHELLS - SELECT DISPLAY</a>
                               </li>
                               <li className="menu-list-item nav-item-sub">
-                                <a className="nav-link-sub nav-text-sub" href="product.html">Featured &amp; On Sale</a>
+                                <a className="nav-link-sub nav-text-sub" href="product.html">MEDIUM SEASHELLS - SELECT DISPLAY</a>
                               </li>
                               <li className="menu-list-item nav-item-sub">
-                                <a className="nav-link-sub nav-text-sub" href="product-2.html">Tab Inside</a>
+                                <a className="nav-link-sub nav-text-sub" href="product-2.html">MUREX RAMOSUS</a>
                               </li>
+                              <li className="menu-list-item nav-item-sub">
+                              <a className="nav-link-sub nav-text-sub" href="product-2.html">  SEASHELL MIX - TINY, MEDIUM & LARGE</a>
+                            </li>
+                            <li className="menu-list-item nav-item-sub">
+                              <a className="nav-link-sub nav-text-sub" href="product-2.html"> SEASHELLS</a>
+                            </li>
+                            
+                            
                             </ul>
                           </div>
                         </li>
                         <li className="menu-list-item nav-item-sub">
                           <div className="mega-menu-header d-flex align-items-center justify-content-between">
                             <a className="nav-link-sub nav-text-sub megamenu-heading" href="index.html">
-                              PRODUCT LAYOUTS
+                            CATAGORIES PAGES
                             </a>
                           </div>
                           <div className="submenu-transform megamenu-transform">
                             <ul className="megamenu list-unstyled">
                               <li className="menu-list-item nav-item-sub">
-                                <a className="nav-link-sub nav-text-sub" href="product-2.html">Grid Images</a>
+                                <a className="nav-link-sub nav-text-sub" href="product-2.html">NAUTILUS SEASHELLS</a>
                               </li>
                               <li className="menu-list-item nav-item-sub">
-                                <a className="nav-link-sub nav-text-sub" href="product.html">Vertical Thumb</a>
+                                <a className="nav-link-sub nav-text-sub" href="product.html">NOVELTY SEA PRODUCTS</a>
                               </li>
                               <li className="menu-list-item nav-item-sub">
-                                <a className="nav-link-sub nav-text-sub" href="product.html">Gallery Type</a>
+                                <a className="nav-link-sub nav-text-sub" href="product.html">ROUND FLORIDA SAND DOLLARS</a>
                               </li>
                               <li className="menu-list-item nav-item-sub">
-                                <a className="nav-link-sub nav-text-sub" href="product.html">Product Width Layout</a>
+                                <a className="nav-link-sub nav-text-sub" href="product.html">SEA GLASS</a>
                               </li>
                               <li className="menu-list-item nav-item-sub">
-                                <a className="nav-link-sub nav-text-sub" href="product.html">Sticky Gallery</a>
+                                <a className="nav-link-sub nav-text-sub" href="product.html">SEA FANS & CORAL</a>
                               </li>
+                              <li className="menu-list-item nav-item-sub">
+                              <a className="nav-link-sub nav-text-sub" href="product.html"> STARFISH</a>
+                            </li>
+                          
+                              <li className="menu-list-item nav-item-sub">
+                              <a className="nav-link-sub nav-text-sub" href="product.html">STARFISH & SAND DOLLARS</a>
+                            </li>
+                            <li className="menu-list-item nav-item-sub">
+                            <a className="nav-link-sub nav-text-sub" href="product-2.html"> URCHINS</a>
+                          </li>
                             </ul>
                           </div>
                         </li>
@@ -237,6 +263,9 @@ function Navbar() {
                 <li className="menu-list-item nav-item">
                   <NavLink className="nav-link" to="/contact">Contact</NavLink>
                 </li>
+                <li className="menu-list-item nav-item">
+                <NavLink className="nav-link" to="/blog">Blog</NavLink>
+              </li>
               </ul>
             </nav>
           </div>
