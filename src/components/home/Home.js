@@ -1,7 +1,7 @@
 import React from 'react'
 import ImageSliderCard from './ImageSliderCard'
 import ImageSliderCard2 from './ImageSlider2'
-
+import './home.css';
 function Home() {
 
   return (
@@ -54,12 +54,12 @@ function Home() {
      </div>
      <div className="grid-container shop-category-inner">
        <a className="grid-item grid-item-1 position-relative rounded mt-0 d-flex" href="collection-left-sidebar.html">
-         <img className="banner-img" src="assets/img/products/shell/ss1091.jpg" alt="banner-1" />
-         <div className="content-absolute content-slide">
+       
+         <div className="content-absolute content-slide  overlay">
            <div className="container height-inherit d-flex">
              <div className="content-box banner-content p-4">
                <p className="heading_16 m-0 primary-color">New Arrivals</p>
-               <h2 className="heading_18">DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES</h2>
+               <h2 className="heading_18"> SEA SPONGES</h2>
                <span className="text_12 mt-2 link-underline d-block">SHOP
                  COLLECTION
                </span>
@@ -68,8 +68,8 @@ function Home() {
          </div>
        </a>
        <a className="grid-item grid-item-2 position-relative rounded mt-0 d-flex" href="collection-left-sidebar.html">
-         <img className="banner-img" src="assets/img/products/shell/Fernandezi Snail Hermit Crab shells.jpg" alt="banner-1" />
-         <div className="content-absolute content-slide">
+         
+         <div className="content-absolute content-slide  overlay">
            <div className="container height-inherit d-flex">
              <div className="content-box banner-content p-4">
                <p className="heading_16 m-0 primary-color">New Arrivals</p>
@@ -82,11 +82,11 @@ function Home() {
          </div>
        </a>
        <a className="grid-item grid-item-3 position-relative rounded mt-0 d-flex" href="collection-left-sidebar.html">
-         <img className="banner-img" src="assets/img/products/shell/Irish Flat Scallop Shells.jpg" alt="banner-1" />
-         <div className="content-absolute content-slide">
-           <div className="container height-inherit d-flex justify-content-end text-end">
+       
+         <div className="content-absolute content-slide  overlay">
+           <div className="container height-inherit d-flex justify-content-end text-end overlay">
              <div className="content-box banner-content p-4">
-               <p className="heading_16 m-0 primary-color">Quality Product</p>
+               <p className="heading_16 m-0 primary-color">New Arrival</p>
                <h2 className="heading_18">SEA FANS & CORAL</h2>
                <span className="text_12 mt-2 link-underline d-block">SHOP
                  COLLECTION
@@ -96,13 +96,13 @@ function Home() {
          </div>
        </a>
        <a className="grid-item grid-item-4 position-relative rounded mt-0 d-flex" href="collection-left-sidebar.html">
-         <img className="banner-img" src="assets/img/products/shell/BAKING SCALLOP CLAMS SEAFOOD COOKING SHELLS.jpg" alt="banner-1" />
+        
          <div className="content-absolute content-slide">
-           <div className="container height-inherit d-flex">
+           <div className="container height-inherit d-flex overlay">
              <div className="content-box banner-content p-4">
                <p className="heading_16 m-0 primary-color">New Arrivals</p>
                <h2 className="heading_18">SEASHELLS</h2>
-               <span className="text_12 mt-2 link-underline d-block">SHOP
+               <span className="text_12 mt-2 link-underline d-block ">SHOP
                  COLLECTION
                </span>
              </div>
@@ -110,8 +110,8 @@ function Home() {
          </div>
        </a>
        <a className="grid-item grid-item-5 position-relative rounded mt-0 d-flex" href="collection-left-sidebar.html">
-         <img className="banner-img" src="assets/img/products/shell/Dyed Multi Color Ark Shells.jpg" alt="banner-1" />
-         <div className="content-absolute content-slide">
+        
+         <div className="content-absolute content-slide  overlay">
            <div className="container height-inherit d-flex">
              <div className="content-box banner-content p-4">
                <p className="heading_16 m-0 primary-color">New Arrivals</p>
@@ -262,7 +262,7 @@ function Home() {
                       </a>
                     </div>
                     <div className="product-card-details text-center">
-                      <h3 className="product-card-title"><a href="collection-left-sidebar.html">Bat Starfish Dried</a>
+                      <h3 className="product-card-title"><a href="collection-left-sidebar.html">BAT STARFISH DRIED</a>
                       </h3>
                       <div className="product-card-price">
                         <span className="card-price-regular">$5.95</span>
@@ -397,7 +397,7 @@ function Home() {
               </div>
               <div className="faq-container">
                 <div className="row">
-                  <div className="col-lg-6 col-md-6 col-12">
+                  <div className="col-lg-6 col-md-6 col-12 faq">
                     <div className="faq-item rounded">
                       <h2 className="faq-heading heading_18 collapsed d-flex align-items-center justify-content-between" data-bs-toggle="collapse" data-bs-target="#faq1">
                         How to place an order with North Florida Shell?

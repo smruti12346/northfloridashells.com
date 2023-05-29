@@ -4047,7 +4047,7 @@ blockquote {
   }
 
   .logo{
-    font-size: 29px;
+    font-size: 18px;
     text-decoration: none;
     font-weight: bold;
     font-family: 'Righteous', cursive;
@@ -4079,3 +4079,68 @@ blockquote {
     font-weight: bold;
   
   }
+
+ /* shop catagory media quires */
+
+
+
+/* product catagory */
+@media only screen and (max-width: 767px) {
+  .col-lg-3,
+  .col-md-6,
+  .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .secondary-img{width: 100%;
+  margin-left: 33px;}
+  .primary-img{width: 100%;
+    margin-left: 33px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .col-lg-3,
+  .col-md-6,
+  .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* faq */
+/* Small devices (up to 576px) */
+@media (max-width: 576px) {
+  .faq-section {
+    margin-top: 50px;
+  }
+
+  .faq-container {
+    padding: 0 15px;
+  }
+
+  .col-lg-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Medium devices (576px - 992px) */
+@media (min-width: 577px) and (max-width: 992px) {
+  .faq-section {
+    margin-top: 80px;
+  }
+  .col-lg-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Large devices (992px and up) */
+@media (min-width: 993px) {
+  .faq-section {
+    margin-top: 100px;
+  }
+}
+
+

@@ -11,7 +11,30 @@ const ImageSliderCard = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows:true
+    arrows:true,
+    responsive: [
+      {
+        breakpoint: 768, // Set a breakpoint for mobile screens (adjust as needed)
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1024, // Set a breakpoint for tablets (adjust as needed)
+        settings: {
+          slidesToShow: 2, // Show 2 slides at a time on tablets
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1200, // Set a breakpoint for larger screens (adjust as needed)
+        settings: {
+          slidesToShow: 3, // Show 3 slides at a time on larger screens
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (

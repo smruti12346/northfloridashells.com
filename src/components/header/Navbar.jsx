@@ -1,8 +1,12 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
 
+import { NavLink } from 'react-router-dom';
+import { GiHamburgerMenu } from "react-icons/gi";
+import React from 'react';
+import { useState } from 'react';
 function Navbar() {
+  const [showMediaIcons, setShowMediaIcons] = useState(false);
   return (
+   
     <React.Fragment>
     {/* announcement bar start */}
     <div className="announcement-bar bg-3 py-1 py-lg-2">
@@ -88,19 +92,25 @@ function Navbar() {
   </div>
   {/* announcement bar end */}
   {/* header start */}
+  
   <header className="sticky-header border-btm-black header-1">
+ 
     <div className="header-bottom">
-      <div className="container">
+      <div className="container"  >
         <div className="row align-items-center">
           <div className="col-lg-3 col-md-4 col-4">
             <div className="header-logo">
-              <NavLink to="/" className="logo-main logo">North <span>&nbsp;Florida&nbsp;</span> Shell
-              { /* <img src="assets/img/logo.png" loading="lazy" alt="bisum" />*/}
+              <NavLink to="/" className="logo-main logo">
+               <img src="assets/img/logo.png" loading="lazy" alt="bisum" />
               </NavLink>
             </div>
           </div>
           <div className="col-lg-6 d-lg-block d-none">
-            <nav className="site-navigation">
+         
+            <nav className="site-navigation ">
+            <div   className={
+              showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
+            }>
               <ul className="main-menu list-unstyled justify-content-center">
                 <li className="menu-list-item nav-item has-dropdown active">
                   <div className="mega-menu-header">
@@ -267,7 +277,9 @@ function Navbar() {
                 <NavLink className="nav-link" to="/blog">Blog</NavLink>
               </li>
               </ul>
+              </div>
             </nav>
+         
           </div>
           <div className="col-lg-3 col-md-8 col-8">
             <div className="header-action d-flex align-items-center justify-content-end">
@@ -286,12 +298,13 @@ function Navbar() {
                   <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="black" />
                 </svg>
               </NavLink>
-              <a className="header-action-item header-hamburger ms-4 d-lg-none" href="#drawer-menu" data-bs-toggle="offcanvas">
-                <svg className="icon icon-hamburger" xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                  <line x1={3} y1={12} x2={21} y2={12} />
-                  <line x1={3} y1={6} x2={21} y2={6} />
-                  <line x1={3} y1={18} x2={21} y2={18} />
-                </svg>
+              <a className="header-action-item header-hamburger ms-4 d-lg-none hamburger-menu" href="#drawer-menu"  data-bs-toggle="offcanvas"  onClick={() => setShowMediaIcons(!showMediaIcons)}>
+              <svg className="icon icon-hamburger" xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                                <line x1={3} y1={12} x2={21} y2={12} />
+                                <line x1={3} y1={6} x2={21} y2={6} />
+                                <line x1={3} y1={18} x2={21} y2={18} />
+                              </svg>
+                
               </a>
             </div>
           </div>
@@ -318,10 +331,23 @@ function Navbar() {
         </div>
       </div>
     </div>
+   
   </header>
+ 
   {/* header end */}
     </React.Fragment>
   )
 }
 
 export default Navbar
+
+// <svg className="icon icon-hamburger" xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+//                   <line x1={3} y1={12} x2={21} y2={12} />
+//                   <line x1={3} y1={6} x2={21} y2={6} />
+//                   <line x1={3} y1={18} x2={21} y2={18} />
+//                 </svg>
+
+// <div
+// className={
+//   showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
+// }>

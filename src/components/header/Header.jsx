@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import BannerCarousel from './BannerCarousel'
+import Navs from './Navs';
 
 
 function Header() {
@@ -23,11 +24,11 @@ function Header() {
   ];
   return (
     <React.Fragment>
-    <Navbar/>
+    <Navs/>
     <BannerCarousel/>
     </React.Fragment>
   )
 }
 
 export default Header
-//
+// <Navs/>

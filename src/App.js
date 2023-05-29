@@ -16,13 +16,14 @@ import Cart from './components/products/Cart';
 import Wishlist from './components/products/Wishlist';
 import SingleProduct from './components/products/SingleProduct';
 import Blog from './components/blog/Blog'
+
 function App() {
   useEffect(()=>{
     AOS.init();
   })
   return (
     <React.Fragment>
-    <Router basename={'/shell'}>
+    <Router basename={'/'}>
     <Header/>
     <Routes>
     <Route path='/' element={<Home/>}/>

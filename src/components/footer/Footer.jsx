@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-
+import '../header/Navs.css';
 function Footer() {
   return (
     <React.Fragment>
@@ -68,11 +68,12 @@ function Footer() {
             </div>
             <div className="col-xl-4 col-lg-5 col-md-6 col-12 footer-widget">
               <div className="footer-widget-inner">
-                <h4 className="footer-logo">
-                <NavLink to="/" className="logo-main logo">North <span>&nbsp;Florida&nbsp;</span> Shell
-                { /* <img src="assets/img/logo.png" loading="lazy" alt="bisum" />*/}
-                </NavLink>
-                </h4>
+              <div className="logo">
+              <h2>
+                <span>N</span>orth<span>F</span>lorida
+                <span>S</span>hell
+              </h2>
+            </div>
                 <div className="footer-newsletter">
                   <p className="footer-text mb-3">Stay up to date with all the news.</p>
                   <div className="newsletter-wrapper">
@@ -146,3 +147,9 @@ function Footer() {
 }
 
 export default Footer
+
+// <h4 className="footer-logo">
+// <NavLink to="/" className="logo-main logo">North <span>&nbsp;Florida&nbsp;</span> Shell
+// { /* <img src="assets/img/logo.png" loading="lazy" alt="bisum" />*/}
+// </NavLink>
+// </h4>

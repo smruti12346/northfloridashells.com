@@ -1,0 +1,111 @@
+.grid-item-1{
+    background-image: url("/public/assets/img/products/shell/sponge.jpg");
+    background-size:cover;
+   
+    background-repeat: no-repeat;
+    height:622px;
+    width:350px;
+    
+
+  }
+  .grid-item-2{
+    background-image: url("/public/assets/img/products/shell/hcb.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+ 
+    width:400px;
+
+  }
+  .grid-item-3{
+    background-image: url("/public/assets/img/products/shell/shell1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:350
+    
+
+  }
+  .grid-item-4{
+    background-image: url("/public/assets/img/products/shell/seafan.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+
+  }
+
+  .grid-item-5{
+    background-image: url("/public/assets/img/products/shell/sea-glass.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+
+  }
+  
+  .content-box p{
+    color: beige;
+  }
+  .content-box h2{
+    color: rgb(255, 255, 255);
+  }
+  .content-absolute {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+   
+}
+.overlay {
+    align-items: center;
+    background-color: hsla(0,0%,100%,.25);
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+ 
+}
+.content-absolute span{
+    color: beige;
+}
+
+/* Adjustments for Mobile Devices */
+@media screen and (max-width: 767px) {
+    /* Reduce margin and padding for grid items */
+    .grid-item {
+      margin-top: 0;
+      padding: 0;
+    }
+    
+    /* Adjust grid item width and height */
+    .grid-item {
+      width: 100%;
+      height: 300px;
+    }
+   
+    
+    /* Adjust text alignment */
+    .banner-content {
+      text-align: center;
+    }
+    
+    /* Adjust container height */
+    .container.height-inherit {
+      height: auto;
+    }
+    
+    /* Adjust overlay positioning */
+    .overlay {
+      position: static;
+    }
+    
+    /* Adjust section header */
+    .section-header {
+      margin-bottom: 20px;
+    }
+  }
+
+  
