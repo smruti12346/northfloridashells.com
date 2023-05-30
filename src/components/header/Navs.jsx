@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Navs.css";
+
 import {
   FaSearch,
   FaRegHeart,
@@ -121,20 +122,12 @@ const Navs = () => {
      About
    </NavLink>
      </li>
-     <li className="dropdown  nav-link ">
-     <NavLink to="/products">Shop</NavLink>
-     <div className="dropdown-content dropdown-menu ">
-       <a href="#"> SEA SPONGES</a>
-       <a href="#">SEA SHELL</a>
-       <a href="#">CUT AND BANDED SHELLS</a>
-       <a href="#">DISPLAY STANDS</a>
-       <a href="#">SEA GLASS</a>
-       <a href="#">HERMIT CRAB SHELLS</a>
-       <a href="#">STARFISH</a>
-       <a href="#">SEA FANS & CORAL</a>
-       <a href="#">NAUTILUS SEASHELLS</a>
-     </div>
-   </li>
+     <li className="dropdown  ">
+     <NavLink className=" nav-link" to="/products">Shop</NavLink>
+    
+     </li>
+     
+  
      <li>
      <NavLink className="nav-link " to="/contact">
      Contact
@@ -188,3 +181,161 @@ const Navs = () => {
 }
 
 export default Navs;
+
+// <li className="dropdown  ">
+// <NavLink className=" nav-link" to="/products">Shop</NavLink>
+// <div className="dropdown-content dropdown-menu ">
+ 
+//   <a href="#">SEA SHELL</a>
+//   <a href="#">CUT AND BANDED SHELLS</a>
+//   <a href="#">DISPLAY STANDS</a>
+//   <a href="#">SEA GLASS</a>
+//   <a href="#">HERMIT CRAB SHELLS</a>
+//   <a href="#">STARFISH</a>
+//   <a href="#">SEA FANS & CORAL</a>
+//   <a href="#">NAUTILUS SEASHELLS</a>
+// </div>
+// </li>
+
+
+// <li className="menu-list-item nav-item has-megamenu">
+// <div className="mega-menu-header">
+//   <NavLink className="nav-link" to="/products">
+//     Shop
+//   </NavLink>
+//   <span className="open-submenu">
+//     <svg className="icon icon-dropdown" xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+//       <polyline points="6 9 12 15 18 9" />
+//     </svg>
+//   </span>
+// </div>
+// <div className="submenu-transform submenu-transform-desktop">
+//   <div className="container">
+//     <ul className="submenu megamenu-container list-unstyled">
+//       <li className="menu-list-item nav-item-sub">
+//         <div className="mega-menu-header">
+//           <a className="nav-link-sub nav-text-sub megamenu-heading" href="collection-left-sidebar.html">
+//             CATEGORY PAGES
+//           </a>
+//         </div>
+//         <div className="submenu-transform megamenu-transform">
+//           <ul className="megamenu list-unstyled">
+//             <li className="menu-list-item nav-item-sub">
+//               <a className="nav-link-sub nav-text-sub " href="collection-left-sidebar.html">DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES</a>
+//             </li>
+//             <li className="menu-list-item nav-item-sub">
+//               <a className="nav-link-sub nav-text-sub" href="collection-right-sidebar.html">BULK WHOLESALE LOT SPECIALS</a>
+//             </li>
+//             <li className="menu-list-item nav-item-sub">
+//               <a className="nav-link-sub nav-text-sub" href="collection-left-sidebar.html">CUT AND BANDED SHELLS</a>
+//             </li>
+//             <li className="menu-list-item nav-item-sub">
+//               <a className="nav-link-sub nav-text-sub" href="collection-without-sidebar.html">DISPLAY STANDS</a>
+//             </li>
+//             <li className="menu-list-item nav-item-sub">
+//               <a className="nav-link-sub nav-text-sub" href="collection-without-sidebar.html">DRIED FISH, BLOW FISH</a>
+//             </li>
+//             <li className="menu-list-item nav-item-sub">
+//             <a className="nav-link-sub nav-text-sub" href="collection-without-sidebar.html">SEA LIFE LOTS</a>
+//           </li>
+//           <li className="menu-list-item nav-item-sub">
+//           <a className="nav-link-sub nav-text-sub" href="collection-without-sidebar.html">SEAHORSE</a>
+//         </li>
+//         <li className="menu-list-item nav-item-sub">
+//           <a className="nav-link-sub nav-text-sub" href="collection-without-sidebar.html">   JEWELRY</a>
+//         </li>
+     
+//           </ul>
+//         </div>
+//       </li>
+//       <li className="menu-list-item nav-item-sub">
+//         <div className="mega-menu-header d-flex align-items-center justify-content-between">
+//           <a className="nav-link-sub nav-text-sub megamenu-heading" href="collection-right-sidebar.html">
+//            CATAGORIES PAGES
+//           </a>
+//         </div>
+//         <div className="submenu-transform megamenu-transform">
+//           <ul className="megamenu list-unstyled">
+//             <li className="menu-list-item nav-item-sub">
+//               <a className="nav-link-sub nav-text-sub" href="product.html">FLAT, CLAM, SCALLOP, AND PECTIN SHELLS</a>
+//             </li>
+//             <li className="menu-list-item nav-item-sub">
+//               <a className="nav-link-sub nav-text-sub" href="product.html">HERMIT CRAB SHELLS</a>
+//             </li>
+//             <li className="menu-list-item nav-item-sub">
+//               <a className="nav-link-sub nav-text-sub" href="product.html">LARGE SEASHELLS - SELECT DISPLAY</a>
+//             </li>
+//             <li className="menu-list-item nav-item-sub">
+//               <a className="nav-link-sub nav-text-sub" href="product.html">MEDIUM SEASHELLS - SELECT DISPLAY</a>
+//             </li>
+//             <li className="menu-list-item nav-item-sub">
+//               <a className="nav-link-sub nav-text-sub" href="product-2.html">MUREX RAMOSUS</a>
+//             </li>
+//             <li className="menu-list-item nav-item-sub">
+//             <a className="nav-link-sub nav-text-sub" href="product-2.html">  SEASHELL MIX - TINY, MEDIUM & LARGE</a>
+//           </li>
+//           <li className="menu-list-item nav-item-sub">
+//             <a className="nav-link-sub nav-text-sub" href="product-2.html"> SEASHELLS</a>
+//           </li>
+          
+          
+//           </ul>
+//         </div>
+//       </li>
+//       <li className="menu-list-item nav-item-sub">
+//         <div className="mega-menu-header d-flex align-items-center justify-content-between">
+//           <a className="nav-link-sub nav-text-sub megamenu-heading" href="index.html">
+//           CATAGORIES PAGES
+//           </a>
+//         </div>
+//         <div className="submenu-transform megamenu-transform">
+//           <ul className="megamenu list-unstyled">
+//             <li className="menu-list-item nav-item-sub">
+//               <a className="nav-link-sub nav-text-sub" href="product-2.html">NAUTILUS SEASHELLS</a>
+//             </li>
+//             <li className="menu-list-item nav-item-sub">
+//               <a className="nav-link-sub nav-text-sub" href="product.html">NOVELTY SEA PRODUCTS</a>
+//             </li>
+//             <li className="menu-list-item nav-item-sub">
+//               <a className="nav-link-sub nav-text-sub" href="product.html">ROUND FLORIDA SAND DOLLARS</a>
+//             </li>
+//             <li className="menu-list-item nav-item-sub">
+//               <a className="nav-link-sub nav-text-sub" href="product.html">SEA GLASS</a>
+//             </li>
+//             <li className="menu-list-item nav-item-sub">
+//               <a className="nav-link-sub nav-text-sub" href="product.html">SEA FANS & CORAL</a>
+//             </li>
+//             <li className="menu-list-item nav-item-sub">
+//             <a className="nav-link-sub nav-text-sub" href="product.html"> STARFISH</a>
+//           </li>
+        
+//             <li className="menu-list-item nav-item-sub">
+//             <a className="nav-link-sub nav-text-sub" href="product.html">STARFISH & SAND DOLLARS</a>
+//           </li>
+//           <li className="menu-list-item nav-item-sub">
+//           <a className="nav-link-sub nav-text-sub" href="product-2.html"> URCHINS</a>
+//         </li>
+//           </ul>
+//         </div>
+//       </li>
+//       <li className="menu-list-item nav-item-sub">
+//         <div className="mega-menu-header d-flex align-items-center justify-content-between">
+//           <a className="mega-menu-img nav-link-sub nav-text-sub" href="collection-left-sidebar.html">
+//             <img className="menu-img" src="assets/img/menu/1.jpg" alt="img" />
+//             <h2 className="img-menu-heading text_16 mt-2">Featured
+//               Collection</h2>
+//             <div className="img-menu-action text_12 bg-transparent p-0">
+//               <span>DISCOVER NOW</span>
+//               <span>
+//                 <svg xmlns="http://www.w3.org/2000/svg" width={30} height={18} fill="#000" className="icon-right-long" viewBox="0 0 16 16">
+//                   <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+//                 </svg>
+//               </span>
+//             </div>
+//           </a>
+//         </div>
+//       </li>
+//     </ul>
+//   </div>
+// </div>
+// </li>

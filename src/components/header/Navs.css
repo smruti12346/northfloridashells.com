@@ -480,7 +480,7 @@ li {
 
   .mobile-menu-link {
     position: absolute;
-    top: 80px;
+    top: 61px;
      width: 100%;
 
     background-color: white;
@@ -597,8 +597,9 @@ li {
 .dropdown-content {
   display: none;
   width:500px;
-  position: absolute;
-  top:28px;
+  position:absolute;
+  top:48px;
+ 
  
   background-color: #f9f9f9;
   /* width: 700px; */
@@ -620,4 +621,18 @@ li {
 }
 .n1{
   margin-bottom: 40px;
+}
+
+.link-name{
+  color:rgb(51,51,53)!important;
+  font-family: 'Jost', sans-serif !important;
+  font-size: 17px;
+}
+
+.main-nav{
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

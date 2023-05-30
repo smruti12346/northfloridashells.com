@@ -1,5 +1,5 @@
 .grid-item-1{
-    background-image: url("/public/assets/img/products/shell/sponge.jpg");
+    background-image: url("/public/assets/img/products/shell/sea-sponge2.jpg");
     background-size:cover;
    
     background-repeat: no-repeat;
@@ -106,6 +106,7 @@
     .section-header {
       margin-bottom: 20px;
     }
+     
   }
 
   

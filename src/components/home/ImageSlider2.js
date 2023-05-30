@@ -16,7 +16,7 @@ const ImageSliderCard2 = () => {
       {
         breakpoint: 768, // Set a breakpoint for mobile screens (adjust as needed)
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },

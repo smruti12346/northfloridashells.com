@@ -23,7 +23,7 @@ function App() {
   })
   return (
     <React.Fragment>
-    <BrowserRouter basename={'/'} >
+    <BrowserRouter basename={'/shell'} >
     <Header/>
     <Routes>
     <Route path='/' element={<Home/>}/>
