@@ -112,17 +112,17 @@ const Navs = () => {
   }>
    <ul>
      <li>
-     <NavLink className="nav-link n1" to="/">
+     <NavLink className="nav-link " to="/">
      Home
    </NavLink>
      </li>
      <li>
-     <NavLink className="nav-link n1" to="/about">
-     about
+     <NavLink className="nav-link " to="/about">
+     About
    </NavLink>
      </li>
-     <li className="dropdown nav-link n1">
-     <NavLink href="#">Shop</NavLink>
+     <li className="dropdown  nav-link ">
+     <NavLink to="/products">Shop</NavLink>
      <div className="dropdown-content dropdown-menu ">
        <a href="#"> SEA SPONGES</a>
        <a href="#">SEA SHELL</a>
@@ -136,13 +136,13 @@ const Navs = () => {
      </div>
    </li>
      <li>
-     <NavLink className="nav-link n1" to="/contact">
-     contact
+     <NavLink className="nav-link " to="/contact">
+     Contact
    </NavLink>
      </li>
      <li>
-     <NavLink  className="nav-link n1" to="/blog">
-     blog
+     <NavLink  className="nav-link " to="/blog">
+     Blog
    </NavLink>
      </li>
    </ul>

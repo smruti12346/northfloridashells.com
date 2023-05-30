@@ -4065,10 +4065,10 @@ blockquote {
   .about{
     margin-top: 40px;
   }
-  .product-card img{
-    height:350px;
-    width:300px;
-  }
+  /* .product-card img{ */
+    /* height:350px; */
+    /* width:300px; */
+  /* } */
   .heading_18{
     color:rgb(26, 22, 22);
     font-weight: bold;
@@ -4097,6 +4097,11 @@ blockquote {
   .primary-img{width: 100%;
     margin-left: 33px;
   }
+  .mobile-menu-link li{
+    margin: 0px!important;
+  }
+  
+
 }
 
 @media only screen and (max-width: 479px) {
@@ -4143,4 +4148,12 @@ blockquote {
   }
 }
 
+.menu-link li{
+  margin-bottom: 40px;
+}
 
+.about-hero-img img{
+ 
+    max-width: 100%;
+    height: 450px;
+}

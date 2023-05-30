@@ -3,7 +3,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Home from './components/home/Home';
@@ -23,7 +23,7 @@ function App() {
   })
   return (
     <React.Fragment>
-    <Router basename={'/'}>
+    <BrowserRouter basename={'/'} >
     <Header/>
     <Routes>
     <Route path='/' element={<Home/>}/>
@@ -38,7 +38,7 @@ function App() {
     <Route path='/blog' element={<Blog/>}/>
    </Routes>
     <Footer/>
-    </Router>
+    </BrowserRouter>
     </React.Fragment>
   );
 }

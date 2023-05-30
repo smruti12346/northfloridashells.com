@@ -35,34 +35,12 @@ function About() {
               
               No Minimum Purchase
               We offer discounts on two or more items over $50.00 from 15% to 35% every day.</p>
-              <ul className="about-hero-action p-0">
-                <li className="action-item d-flex">
-                  <div className="action-count">01</div>
-                  <div className="action-content">
-                    <h4 className="action-title"><a href="#">Quality</a></h4>
-                    <p className="action-subtitle">Here at North Florida Shells, we only sell 100% real Sea Items that are #1 Quality dried sea Creatures, starfish, shell products and more.</p>
-                  </div>
-                </li>
-                <li className="action-item d-flex">
-                  <div className="action-count">02</div>
-                  <div className="action-content">
-                    <h4 className="action-title"><a href="#">FREE SHIPPING</a></h4>
-                    <p className="action-subtitle">Through True Rich Attended does no end it his mother since real.</p>
-                  </div>
-                </li>
-                <li className="action-item d-flex">
-                  <div className="action-count">03</div>
-                  <div className="action-content">
-                    <h4 className="action-title"><a href="#">Damage - Returns - Refunds </a></h4>
-                    <p className="action-subtitle">Ecstatic unsatiable saw his giving Remain expense you position concluded.</p>
-                  </div>
-                </li>
-              </ul>
+              
             </div>
           </div>
           <div className="col-lg-6 col-md-12 col-12">
             <div className="about-hero-img">
-              <img src="assets/img/about/about-hero.jpg" alt="img" />
+              <img src="/assets/img/products/shell/shell2.jpg" alt="img" />
             </div>
           </div>
         </div>
@@ -160,87 +138,7 @@ function About() {
       </div>
     </div>
     {/* about service end */}
-    {/* team start */}
-    <div className="team-section mt-100" data-aos="fade-up" data-aos-duration={700}>
-      <div className="team-section-wrapper">
-        <div className="container">
-          <div className="section-header text-center">
-            <h2 className="section-heading">Our Products</h2>
-          </div>
-          <div className="team-wrapper">
-            <div className="row">
-              <div className="col-lg-4 col-md-6 col-12">
-                <div className="team-item">
-                  <img src="assets/img/team/1.jpg" alt="img" />
-                  <div className="member-absolute">
-                    <div className="member-details text-center">
-                      <h4 className="member-name">30+ ASSORTED HERMIT CRAB SHELLS</h4>
-                      <p className="member-desig">Crab Shell</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-12">
-                <div className="team-item">
-                  <img src="assets/img/team/2.jpg" alt="img" />
-                  <div className="member-absolute">
-                    <div className="member-details text-center">
-                      <h4 className="member-name">4"+ BAKING SCALLOP CLAMS SEAFOOD -</h4>
-                      <p className="member-desig">Cooking Shell</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-12">
-                <div className="team-item">
-                  <img src="assets/img/team/3.jpg" alt="img" />
-                  <div className="member-absolute">
-                    <div className="member-details text-center">
-                      <h4 className="member-name">BULK LOTS OF BLEACHED WHITE KNOBBY STARFISH</h4>
-                      <p className="member-desig">Starfish</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-12">
-                <div className="team-item">
-                  <img src="assets/img/team/4.jpg" alt="img" />
-                  <div className="member-absolute">
-                    <div className="member-details text-center">
-                      <h4 className="member-name">ALPHONSO URCHINS DRIED</h4>
-                      <p className="member-desig">URCHINS</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-12">
-                <div className="team-item">
-                  <img src="assets/img/team/5.jpg" alt="img" />
-                  <div className="member-absolute">
-                    <div className="member-details text-center">
-                      <h4 className="member-name">AQUA BLUE TEAL & ICE MIX </h4>
-                      <p className="member-desig">Sea Glass</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-12">
-                <div className="team-item">
-                  <img src="assets/img/team/6.jpg" alt="img" />
-                  <div className="member-absolute">
-                    <div className="member-details text-center">
-                      <h4 className="member-name">BLACK CORAL SEA FANS</h4>
-                      <p className="member-desig">Sea Fan</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    {/* team end */}
+   
     {/* about banner start */}
     <div className="about-banner mt-100" data-aos="fade-up" data-aos-duration={700}>
       <div className="container">
@@ -260,3 +158,85 @@ function About() {
 }
 
 export default About
+
+ {/* team start */}
+//  <div className="team-section mt-100" data-aos="fade-up" data-aos-duration={700}>
+//  <div className="team-section-wrapper">
+//    <div className="container">
+//      <div className="section-header text-center">
+//        <h2 className="section-heading">Our Products</h2>
+//      </div>
+//      <div className="team-wrapper">
+//        <div className="row">
+//          <div className="col-lg-4 col-md-6 col-12">
+//            <div className="team-item">
+//              <img src="\assets\img\products\shell\resize\Among-pearl-pong-trochus-Shells.png" alt="img" />
+//              <div className="member-absolute">
+//                <div className="member-details text-center">
+//                  <h4 className="member-name"> HERMIT CRAB SHELLS</h4>
+//                  <p className="member-desig">Crab Shell</p>
+//                </div>
+//              </div>
+//            </div>
+//          </div>
+//          <div className="col-lg-4 col-md-6 col-12">
+//            <div className="team-item">
+//              <img height="450px" src="\assets\img\products\shell\resize\img1.png" alt="img" />
+//              <div className="member-absolute">
+//                <div className="member-details text-center">
+//                  <h4 className="member-name">4"+ BAKING SCALLOP SEAFOOD</h4>
+//                  <p className="member-desig">Cooking Shell</p>
+//                </div>
+//              </div>
+//            </div>
+//          </div>
+//          <div className="col-lg-4 col-md-6 col-12">
+//            <div className="team-item">
+//              <img height="450px" src="\assets\img\products\shell\resize\img1.png" alt="img" />
+//              <div className="member-absolute">
+//                <div className="member-details text-center">
+//                  <h4 className="member-name">REEF ROCK CORAL</h4>
+//                  <p className="member-desig">Starfish</p>
+//                </div>
+//              </div>
+//            </div>
+//          </div>
+//          <div className="col-lg-4 col-md-6 col-12">
+//            <div className="team-item">
+//              <img height="450px" src="/assets/img/products/shell/Alphonso Urchins Dried.jpg" alt="img" />
+//              <div className="member-absolute">
+//                <div className="member-details text-center">
+//                  <h4 className="member-name">ALPHONSO URCHINS DRIED</h4>
+//                  <p className="member-desig">URCHINS</p>
+//                </div>
+//              </div>
+//            </div>
+//          </div>
+//          <div className="col-lg-4 col-md-6 col-12">
+//            <div className="team-item">
+//              <img  height="450px" src="/assets/img/products/shell/Aqua Blue Teal and Ice Mix Sea Glass.jpg" alt="img" />
+//              <div className="member-absolute">
+//                <div className="member-details text-center">
+//                  <h4 className="member-name">AQUA BLUE TEAL & ICE MIX </h4>
+//                  <p className="member-desig">Sea Glass</p>
+//                </div>
+//              </div>
+//            </div>
+//          </div>
+//          <div className="col-lg-4 col-md-6 col-12">
+//            <div className="team-item">
+//              <img height="450px" src="\assets\img\products\shell\resize\rufa.png" alt="img" />
+//              <div className="member-absolute">
+//                <div className="member-details text-center">
+//                  <h4 className="member-name">Cassis Rufa Display Shell Polished Natural</h4>
+//                  <p className="member-desig">Sea Fan</p>
+//                </div>
+//              </div>
+//            </div>
+//          </div>
+//        </div>
+//      </div>
+//    </div>
+//  </div>
+// </div>
+{/* team end */}

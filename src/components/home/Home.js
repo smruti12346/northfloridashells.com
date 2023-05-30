@@ -141,8 +141,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                        <img className="secondary-img" src="assets/img/products/shell/Aqua Blue Teal and Ice Mix Sea Glass.jpg" alt="product-img" />
-                        <img className="primary-img" src="assets/img/products/shell/Aqua Blue Teal and Ice Mix Sea Glass.jpg" alt="product-img" />
+                      <img className="secondary-img" src="assets\img\products\shell\Aqua Blue Teal and Ice Mix Sea Glass.jpg" alt="product-img" />
+                      <img className="primary-img" src="assets\img\products\shell\Aqua Blue Teal and Ice Mix Sea Glass.jpg" alt="product-img" />
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>
@@ -168,8 +168,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                        <img className="secondary-img" src="assets/img/products/shell/BAKING SCALLOP CLAMS SEAFOOD COOKING SHELLS.jpg" alt="product-img" />
-                        {<img className="primary-img" src="assets/img/products/shell/BAKING SCALLOP CLAMS SEAFOOD COOKING SHELLS.jpg" alt="product-img" />}
+                      <img className="secondary-img" src="assets\img\products\shell\resize\img1.png" alt="product-img" />
+                      {<img className="primary-img" src="assets\img\products\shell\resize\img1.png" alt="product-img" />}
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>
@@ -195,8 +195,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                        <img className="secondary-img" src="assets/img/products/shell/White Knobby Starfish.jpg" alt="product-img" />
-                        <img className="primary-img" src="assets/img/products/shell/White Knobby Starfish.jpg" alt="product-img" />
+                      <img className="secondary-img" src="assets\img\products\shell\resize\White-Knobby-Starfish.png" alt="product-img" />
+                      <img className="primary-img" src="assets\img\products\shell\resize\White-Knobby-Starfish.png" alt="product-img" />
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>
@@ -222,8 +222,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                        <img className="secondary-img" src="assets/img/products/shell/Sugar Starfish Dried.jpg" alt="product-img" />
-                        <img className="primary-img" src="assets/img/products/shell/Sugar Starfish Dried.jpg" alt="product-img" />
+                        <img className="secondary-img" src="assets\img\products\shell\resize\Sugar-Starfish-Dried.png" alt="product-img" />
+                        <img className="primary-img" src="assets\img\products\shell\resize\Sugar-Starfish-Dried.png" alt="product-img" />
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>
@@ -248,8 +248,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                        <img className="secondary-img" src="assets/img/products/shell/Bat Starfish Dried.jpg" alt="product-img" />
-                        <img className="primary-img" src="assets/img/products/shell/Bat Starfish Dried.jpg" alt="product-img" />
+                        <img className="secondary-img" src="assets\img\products\shell\resize\Among-pearl-pong-trochus-Shells.png" alt="product-img" />
+                        <img className="primary-img" src="assets\img\products\shell\resize\Among-pearl-pong-trochus-Shells.png" alt="product-img" />
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>
@@ -262,7 +262,7 @@ function Home() {
                       </a>
                     </div>
                     <div className="product-card-details text-center">
-                      <h3 className="product-card-title"><a href="collection-left-sidebar.html">BAT STARFISH DRIED</a>
+                      <h3 className="product-card-title"><a href="collection-left-sidebar.html">PEARL PONG TROCHUS</a>
                       </h3>
                       <div className="product-card-price">
                         <span className="card-price-regular">$5.95</span>
@@ -274,8 +274,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                        <img className="secondary-img" src="assets/img/products/shell/Alphonso Urchins Dried.jpg" alt="product-img" />
-                        <img className="primary-img" src="assets/img/products/shell/Alphonso Urchins Dried.jpg" alt="product-img" />
+                        <img className="secondary-img" src="assets\img\products\shell\resize\Alphonso-Urchins-Dried.png" alt="product-img" />
+                        <img className="primary-img" src="assets\img\products\shell\resize\Alphonso-Urchins-Dried.png" alt="product-img" />
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>
@@ -300,8 +300,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                        <img className="secondary-img" src="assets/img/products/shell/Dyed Multi Color Ark Shells.jpg" alt="product-img" />
-                        <img className="primary-img" src="assets/img/products/shell/Dyed Multi Color Ark Shells.jpg" alt="product-img" />
+                        <img className="secondary-img" src="assets\img\products\shell\resize\img2.png" alt="product-img" />
+                        <img className="primary-img" src="assets\img\products\shell\resize\img2.png" alt="product-img" />
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>
@@ -326,8 +326,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                        <img className="secondary-img" src="assets/img/products/shell/DEER COWRIE CYPRAEA VITELLUS.jpg" alt="product-img" />
-                        <img className="primary-img" src="assets/img/products/shell/DEER COWRIE CYPRAEA VITELLUS.jpg" alt="product-img" />
+                        <img className="secondary-img" src="assets\img\products\shell\resize\rufa.png" alt="product-img" />
+                        <img className="primary-img" src="assets\img\products\shell\resize\rufa.png" alt="product-img" />
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>
