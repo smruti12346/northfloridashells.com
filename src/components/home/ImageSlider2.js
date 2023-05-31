@@ -43,19 +43,19 @@ const ImageSliderCard2 = () => {
     <Slider {...settings}>
     <div className='card-menu'>
       <div className="card  " >
-        <img src="\assets\img\products\shell\resize\img2.png" alt="Image 1" />
+        <img src="assets/img/products/shell/resize/img2.png" alt="Image 1" />
         
       </div>
       </div>
       <div className='card-menu'>
       <div className="card  ">
-        <img src="\assets\img\products\shell\resize\10-Assorted-Hermit-Crab-Shells.png" alt="Image 2" />
+        <img src="assets/img/products/shell/resize/10-Assorted-Hermit-Crab-Shells.png" alt="Image 2" />
         
       </div>
       </div>
       <div className='card-menu'>
       <div className="card  ">
-      <img src="\assets\img\products\shell\resize\seafans.png" alt="Image 3" />
+      <img src="assets/img/products/shell/resize/seafans.png" alt="Image 3" />
       
     </div>
     </div>

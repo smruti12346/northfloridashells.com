@@ -143,26 +143,29 @@ const Navs = () => {
  {/* 3rd social media links */}
  <div className="social-media">
  <ul className="social-media-desktop">
+ 
    <li>
-     <a
-       href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
-       target="_thapa">
+   
+     <NavLink
+       to=""
+       target="_blank">
        <BiSearch className="search" />
-     </a>
+     </NavLink>
    </li>
    <li>
-   <a
-     href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
-     target="_thapa">
+   <NavLink
+     to="/wishlist"
+     target="_blank">
+
      <FaRegHeart className="heart" />
-   </a>
+   </NavLink>
  </li>
    <li>
-     <a
-       href="https://www.instagram.com/thapatechnical/"
-       target="_thapa">
+     <NavLink
+      to ="/carts"
+       target="_blank">
        <FiShoppingCart className="shcart" />
-     </a>
+     </NavLink>
    </li>
   
  </ul>

@@ -40,7 +40,7 @@ function About() {
           </div>
           <div className="col-lg-6 col-md-12 col-12">
             <div className="about-hero-img">
-              <img src="/assets/img/products/shell/shell2.jpg" alt="img" />
+              <img src="assets/img/products/shell/shell2.jpg" alt="img" />
             </div>
           </div>
         </div>

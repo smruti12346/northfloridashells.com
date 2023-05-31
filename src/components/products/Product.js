@@ -69,8 +69,8 @@ function Product() {
                       <div className="product-card">
                         <div className="product-card-img">
                           <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="\assets\img\products\shell\DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES\Dried Real Craft Sponges.jpg" alt="product-img" />
-                            <img className="primary-img" height="353" src="\assets\img\products\shell\DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES\Dried Real Craft Sponges.jpg" alt="product-img" />
+                            <img className="secondary-img" height="353" src="assets/img/products/shell/DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES\Dried Real Craft Sponges.jpg" alt="product-img" />
+                            <img className="primary-img" height="353" src="assets/img/products/shell/DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES/Dried Real Craft Sponges.jpg" alt="product-img" />
                           </a>
                           <div className="product-badge">
                             <span className="badge-label badge-percentage rounded">-44%</span>
@@ -109,8 +109,8 @@ function Product() {
                       <div className="product-card">
                         <div className="product-card-img">
                           <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="\assets\img\products\shell\DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES\Florida Purple Barnacle Cluster.jpg" alt="product-img" />
-                            <img className="primary-img"  height="353" src="\assets\img\products\shell\DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES\Florida Purple Barnacle Cluster.jpg" alt="product-img" />
+                            <img className="secondary-img" height="353" src="assets/img/products/shell/DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES/Florida Purple Barnacle Cluster.jpg" alt="product-img" />
+                            <img className="primary-img"  height="353" src="assets/img/products/shell/DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES/Florida Purple Barnacle Cluster.jpg" alt="product-img" />
                           </a>
                           <div className="product-card-action product-card-action-2 justify-content-center">
                             <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
@@ -146,8 +146,8 @@ function Product() {
                       <div className="product-card">
                         <div className="product-card-img">
                           <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353"  src="\assets\img\products\shell\10 Assorted Hermit Crab Shells.jpg" alt="product-img" />
-                            <img className="primary-img"  height="353" src="\assets\img\products\shell\10 Assorted Hermit Crab Shells.jpg" alt="product-img" />
+                            <img className="secondary-img" height="353"  src="assets/img/products/shell/10 Assorted Hermit Crab Shells.jpg" alt="product-img" />
+                            <img className="primary-img"  height="353" src="assets/img/products/shell/10 Assorted Hermit Crab Shells.jpg" alt="product-img" />
                           </a>
                           <div className="product-badge">
                             <span className="badge-label badge-new rounded">New</span>
@@ -186,8 +186,8 @@ function Product() {
                       <div className="product-card">
                         <div className="product-card-img">
                           <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="\assets\img\products\shell\red pipe coral.jpg" alt="product-img" />
-                            <img className="primary-img" height="353" src="\assets\img\products\shell\red pipe coral.jpg" alt="product-img" />
+                            <img className="secondary-img" height="353" src="assets/img/products/shell/red pipe coral.jpg" alt="product-img" />
+                            <img className="primary-img" height="353" src="assets/img/products/shell/red pipe coral.jpg" alt="product-img" />
                           </a>
                           <div className="product-card-action product-card-action-2 justify-content-center">
                             <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
@@ -223,8 +223,8 @@ function Product() {
                       <div className="product-card">
                         <div className="product-card-img">
                           <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img"  height="353" src="\assets\img\products\shell\Reef Rock Coral.jpg" alt="product-img" />
-                            <img className="primary-img"  height="353" src="\assets\img\products\shell\Reef Rock Coral.jpg" alt="product-img" />
+                            <img className="secondary-img"  height="353" src="assets/img/products/shell/Reef Rock Coral.jpg" alt="product-img" />
+                            <img className="primary-img"  height="353" src="assets/img/products/shell/Reef Rock Coral.jpg" alt="product-img" />
                           </a>
                           <div className="product-card-action product-card-action-2 justify-content-center">
                             <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
@@ -260,8 +260,8 @@ function Product() {
                       <div className="product-card">
                         <div className="product-card-img">
                           <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="\assets\img\products\shell\mushcoral.jpg" alt="product-img" />
-                            <img className="primary-img" height="353" src="\assets\img\products\shell\mushcoral.jpg" alt="product-img" />
+                            <img className="secondary-img" height="353" src="assets/img/products/shell/mushcoral.jpg" alt="product-img" />
+                            <img className="primary-img" height="353" src="assets/img/products/shell/mushcoral.jpg" alt="product-img" />
                           </a>
                           <div className="product-card-action product-card-action-2 justify-content-center">
                             <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
@@ -297,8 +297,8 @@ function Product() {
                       <div className="product-card">
                         <div className="product-card-img">
                           <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="\assets\img\products\shell\whitecoralweb.jpg" alt="product-img" />
-                            <img className="primary-img" height="353" src="\assets\img\products\shell\whitecoralweb.jpg" alt="product-img" />
+                            <img className="secondary-img" height="353" src="assets/img/products/shell/whitecoralweb.jpg" alt="product-img" />
+                            <img className="primary-img" height="353" src="assets/img/products/shell/whitecoralweb.jpg" alt="product-img" />
                           </a>
                           <div className="product-card-action product-card-action-2 justify-content-center">
                             <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
@@ -334,8 +334,8 @@ function Product() {
                       <div className="product-card">
                         <div className="product-card-img">
                           <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img"  height="353" src="\assets\img\products\shell\KNOBBY4INCH.jpg" alt="product-img" />
-                            <img className="primary-img"  height="353" src="\assets\img\products\shell\KNOBBY4INCH.jpg" alt="product-img" />
+                            <img className="secondary-img"  height="353" src="assets/img/products/shell/KNOBBY4INCH.jpg" alt="product-img" />
+                            <img className="primary-img"  height="353" src="assets/img/products/shell/KNOBBY4INCH.jpg" alt="product-img" />
                           </a>
                           <div className="product-card-action product-card-action-2 justify-content-center">
                             <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
@@ -371,8 +371,8 @@ function Product() {
                       <div className="product-card">
                         <div className="product-card-img">
                           <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="\assets\img\products\shell\wsfknsd2.jpg" alt="product-img" />
-                            <img className="primary-img" height="353" src="\assets\img\products\shell\wsfknsd2.jpg" alt="product-img" />
+                            <img className="secondary-img" height="353" src="assets/img/products/shell/wsfknsd2.jpg" alt="product-img" />
+                            <img className="primary-img" height="353" src="assets/img/products/shell/wsfknsd2.jpg" alt="product-img" />
                           </a>
                           <div className="product-card-action product-card-action-2 justify-content-center">
                             <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
@@ -408,8 +408,8 @@ function Product() {
                       <div className="product-card">
                         <div className="product-card-img">
                           <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="\assets\img\products\shell\tigernaut.jpg" alt="product-img" />
-                            <img className="primary-img" height="353" src="\assets\img\products\shell\tigernaut.jpg" alt="product-img" />
+                            <img className="secondary-img" height="353" src="assets/img/products/shell/tigernaut.jpg" alt="product-img" />
+                            <img className="primary-img" height="353" src="assets/img/products/shell/tigernaut.jpg" alt="product-img" />
                           </a>
                           <div className="product-card-action product-card-action-2 justify-content-center">
                             <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
@@ -445,8 +445,8 @@ function Product() {
                       <div className="product-card">
                         <div className="product-card-img">
                           <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="\assets\img\products\shell\ramosus.jpg" alt="product-img" />
-                            <img className="primary-img" height="353" src="\assets\img\products\shell\ramosus.jpg" alt="product-img" />
+                            <img className="secondary-img" height="353" src="assets/img/products/shell/ramosus.jpg" alt="product-img" />
+                            <img className="primary-img" height="353" src="assets/img/products/shell/ramosus.jpg" alt="product-img" />
                           </a>
                           <div className="product-card-action product-card-action-2 justify-content-center">
                             <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
@@ -482,8 +482,8 @@ function Product() {
                       <div className="product-card">
                         <div className="product-card-img">
                           <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="\assets\img\products\shell\whitearks1132.jpg" alt="product-img" />
-                            <img className="primary-img" height="353" src="\assets\img\products\shell\whitearks1132.jpg" alt="product-img" />
+                            <img className="secondary-img" height="353" src="assets/img/products/shell/whitearks1132.jpg" alt="product-img" />
+                            <img className="primary-img" height="353" src="assets/img/products/shell/whitearks1132.jpg" alt="product-img" />
                           </a>
                           <div className="product-card-action product-card-action-2 justify-content-center">
                             <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
@@ -912,7 +912,7 @@ function Product() {
                     <div className="filter-related">
                       <div className="related-item d-flex">
                         <div className="related-img-wrapper">
-                          <img className="related-img" src="\assets\img\products\shell\pro\4 leg stand.jpg" alt="img" />
+                          <img className="related-img" src="assets\img\products\shell\pro\4 leg stand.jpg" alt="img" />
                         </div>
                         <div className="related-product-info">
                           <h2 className="related-heading heading_18">
@@ -930,7 +930,7 @@ function Product() {
                       </div>
                       <div className="related-item d-flex">
                         <div className="related-img-wrapper">
-                          <img className="related-img" src="\assets\img\products\shell\pro\jb-1.jpg" alt="img" />
+                          <img className="related-img" src="assets\img\products\shell\pro\jb-1.jpg" alt="img" />
                         </div>
                         <div className="related-product-info">
                           <h2 className="related-heading heading_18">
@@ -948,7 +948,7 @@ function Product() {
                       </div>
                       <div className="related-item d-flex">
                         <div className="related-img-wrapper">
-                          <img className="related-img" src="\assets\img\products\shell\pro\shellearrings11.jpg" alt="img" />
+                          <img className="related-img" src="assets\img\products\shell\pro\shellearrings11.jpg" alt="img" />
                         </div>
                         <div className="related-product-info">
                           <h2 className="related-heading heading_18">
