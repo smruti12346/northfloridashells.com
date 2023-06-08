@@ -1,6 +1,5 @@
+import React, { useState, useEffect } from 'react';
 
-import React from 'react';
-import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
@@ -21,9 +20,12 @@ function App() {
   useEffect(()=>{
     AOS.init();
   })
+
+ 
+
   return (
     <React.Fragment>
-    <BrowserRouter basename={'/shell'} >
+    <BrowserRouter basename={'/'} >
     <Header/>
     <Routes>
     <Route path='/' element={<Home/>}/>
@@ -34,7 +36,7 @@ function App() {
     <Route path='/login' element={<Login/>}/>
     <Route path='/registration' element={<Registration/>}/>
     <Route path='/carts' element={<Cart/>}/>
-    <Route path='/wishlist' element={<Wishlist/>}/>
+    <Route path='/wishlist' element={<Wishlist/>} />
     <Route path='/blog' element={<Blog/>}/>
    </Routes>
     <Footer/>

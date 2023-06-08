@@ -1,10 +1,36 @@
-import React from 'react'
+
+import React, { useState, useEffect } from 'react';
 
 function About() {
+  const [aboutData, setAboutData] = useState({});
+
+  // Fetch the API data when the component mounts
+  useEffect(() => {
+    fetchAboutData();
+  }, []);
+
+  const fetchAboutData = async () => {
+    try {
+      const response = await fetch('https://shell-api.thecbdworld.org/wp-json/wp/v2/pages/16');
+      const data = await response.json();
+      setAboutData(data);
+
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
   return (
+   
     <React.Fragment>
+    <h2>{aboutData.title.rendered}</h2>
+    <div dangerouslySetInnerHTML={{ __html: aboutData.content.rendered }} />
+    
     {/* breadcrumb start */}
+    
     <div className="breadcrumb">
+    
+  
     <div className="container">
       <ul className="list-unstyled d-flex align-items-center m-0">
         <li><a href="/">Home</a></li>
@@ -20,6 +46,7 @@ function About() {
     </div>
   </div>
   {/* breadcrumb end */}
+  
   <main id="MainContent" className="content-for-layout">
   <div className="about-page">
     {/* about hero start */}
@@ -151,8 +178,12 @@ function About() {
       </div>
     </div>
     {/* about banner end */}
-  </div>            
+  </div> 
+           
 </main>
+
+
+
     </React.Fragment>
   )
 }

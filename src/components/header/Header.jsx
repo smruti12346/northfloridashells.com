@@ -1,30 +1,31 @@
-import React from 'react'
+
 import Navbar from './Navbar'
 import BannerCarousel from './BannerCarousel'
 import Navs from './Navs';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 
 function Header() {
-  const images = [
-    {
-      src: 'image1.jpg',
-      alt: 'Image 1',
-      description: 'Description 1',
-    },
-    {
-      src: 'image2.jpg',
-      alt: 'Image 2',
-      description: 'Description 2',
-    },
-    {
-      src: 'image3.jpg',
-      alt: 'Image 3',
-      description: 'Description 3',
-    },
-  ];
+  
+
+  const [menuData, setMenuData] = useState([]);
+
+  useEffect(() => {
+    fetchMenuData();
+  }, []);
+
+  const fetchMenuData = async () => {
+    try {
+      const response = await axios.get('https://shell-api.thecbdworld.org/wp-json/wp/v2/menu');
+      setMenuData(response.data);
+    } catch (error) {
+      console.error('Error fetching menu data:', error);
+    }
+  };
   return (
     <React.Fragment>
-    <Navs/>
+    <Navs menuData={menuData} />
     <BannerCarousel/>
     </React.Fragment>
   )
