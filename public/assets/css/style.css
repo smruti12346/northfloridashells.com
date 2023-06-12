@@ -4175,3 +4175,10 @@ blockquote {
 .product-card-title a{
 text-transform: capitalize!important;
 }
+
+.filter-text{
+  font-size: 17px!important;
+  font-weight: 500;
+  color: rgba(0, 0, 3, 0.7);
+
+}

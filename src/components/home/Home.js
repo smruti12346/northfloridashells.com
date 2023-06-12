@@ -1,129 +1,143 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import ImageSliderCard from './ImageSliderCard'
 import ImageSliderCard2 from './ImageSlider2'
 import './home.css';
-function Home() {
+import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 
+
+function Home() {
+  const [catData, setCatData] = useState([]);
+
+  useEffect(() => {
+    fetchCatData();
+  }, []);
+
+  const fetchCatData = async () => {
+    try {
+      const response = await axios.get('https://shell-api.thecbdworld.org/wp-json/wc/v3/products/categories?per_page=100&_embed&consumer_key=ck_672d464c5c966e66b60fc489fe33bdfe66754ead&consumer_secret=cs_3b472ab453ca24462eb961f070474b7fb11b6318');
+      setCatData(response.data);
+    } catch (error) {
+      console.error('Error fetching menu data:', error);
+    }
+  };
+ 
+  const filteredCategories = catData.filter(category => category.name==="HERMIT CRAB SHELLS"); 
+  const filteredCategories1 = catData.filter(category => category.name==="DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES");
+  const filteredCategories2 = catData.filter(category => category.name==="LARGE SEASHELLS");  
+    
+  const filteredCategories3 = catData.filter(category => category.name==="SEA FANS"); 
+  const filteredCategories4 = catData.filter(category => category.name==="SEA GLASS"); 
+  
+  
   return (
     <React.Fragment>
       <main id="MainContent" className="content-for-layout">
 
-        {/* banner start */}
-        {/*} <div className="banner-section mt-100 overflow-hidden">
-    <div className="banner-section-inner">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-lg-6 col-md-6 col-12" data-aos="fade-right" data-aos-duration={1200}>
-            <a className="banner-item position-relative rounded" href="collection-left-sidebar.html">
-              <img className="banner-img" src="assets/img/banner/bag-1.jpg" alt="banner-1" />
-              <div className="content-absolute content-slide">
-                <div className="container height-inherit d-flex align-items-center">
-                  <div className="content-box banner-content p-4">
-                    <p className="heading_18 mb-3">Mini Offer</p>
-                    <h2 className="heading_34">15% off on <br />all Products</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div className="col-lg-6 col-md-6 col-12" data-aos="fade-left" data-aos-duration={1200}>
-            <a className="banner-item position-relative rounded" href="collection-left-sidebar.html">
-              <img className="banner-img" src="assets/img/banner/bag-2.jpg" alt="banner-2" />
-              <div className="content-absolute content-slide">
-                <div className="container height-inherit d-flex align-items-center">
-                  <div className="content-box banner-content p-4">
-                    <p className="heading_18 mb-3">New Year Sell</p>
-                    <h2 className="heading_34">35% off <br />all Products</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>/*}
-  {/* banner end */}
-     
+       
  {/* shop by category start */}
+ 
+
+
  <div className="shop-category mt-100 overflow-hidden">
  <div className="collection-tab-inner">
    <div className="container">
      <div className="section-header text-center">
        <h2 className="section-heading">Shop By Category</h2>
      </div>
+     
      <div className="grid-container shop-category-inner">
-       <a className="grid-item grid-item-1 position-relative rounded mt-0 d-flex" href="collection-left-sidebar.html">
+     {filteredCategories1.map(category => (
+
+       <NavLink className="grid-item grid-item-1 position-relative rounded mt-0 d-flex" to="/seasponge" >
        
          <div className="content-absolute content-slide  overlay">
            <div className="container height-inherit d-flex">
              <div className="content-box banner-content p-4">
                <p className="heading_16 m-0 primary-color">New Arrivals</p>
-               <h2 className="heading_18"> SEA SPONGES</h2>
+               <h2 className="heading_18" >{category.name} 
+               </h2>
                <span className="text_12 mt-2 link-underline d-block">SHOP
                  COLLECTION
                </span>
              </div>
            </div>
          </div>
-       </a>
-       <a className="grid-item grid-item-2 position-relative rounded mt-0 d-flex" href="collection-left-sidebar.html">
+       </NavLink>
+       ))} 
+       {filteredCategories.map(category => (
+       <NavLink className="grid-item grid-item-2 position-relative rounded mt-0 d-flex" to="/hermitshell">
          
          <div className="content-absolute content-slide  overlay">
            <div className="container height-inherit d-flex">
              <div className="content-box banner-content p-4">
                <p className="heading_16 m-0 primary-color">New Arrivals</p>
-               <h2 className="heading_18">HERMIT CRAB SHELLS</h2>
+               <h2 className="heading_18"> {category.name} </h2>
                <span className="text_12 mt-2 link-underline d-block">SHOP
                  COLLECTION
                </span>
              </div>
            </div>
          </div>
-       </a>
-       <a className="grid-item grid-item-3 position-relative rounded mt-0 d-flex" href="collection-left-sidebar.html">
+       </NavLink>
+      
+       ))} 
+       {filteredCategories2.map(category => (
+
+       <NavLink className="grid-item grid-item-3 position-relative rounded mt-0 d-flex" to="/seashell">
        
          <div className="content-absolute content-slide  overlay">
            <div className="container height-inherit d-flex justify-content-end text-end overlay">
              <div className="content-box banner-content p-4">
                <p className="heading_16 m-0 primary-color">New Arrival</p>
-               <h2 className="heading_18">SEA FANS & CORAL</h2>
+               <h2 className="heading_18">{category.name} </h2>
                <span className="text_12 mt-2 link-underline d-block">SHOP
                  COLLECTION
                </span>
              </div>
            </div>
          </div>
-       </a>
-       <a className="grid-item grid-item-4 position-relative rounded mt-0 d-flex" href="collection-left-sidebar.html">
+       </NavLink>
+       ))} 
+       
+       {filteredCategories3.map(category => (
+       <NavLink className="grid-item grid-item-4 position-relative rounded mt-0 d-flex" to="/seafan
+       ">
         
          <div className="content-absolute content-slide">
            <div className="container height-inherit d-flex overlay">
              <div className="content-box banner-content p-4">
                <p className="heading_16 m-0 primary-color">New Arrivals</p>
-               <h2 className="heading_18">SEASHELLS</h2>
+               <h2 className="heading_18">{category.name} </h2>
                <span className="text_12 mt-2 link-underline d-block ">SHOP
                  COLLECTION
                </span>
              </div>
            </div>
          </div>
-       </a>
-       <a className="grid-item grid-item-5 position-relative rounded mt-0 d-flex" href="collection-left-sidebar.html">
+       </NavLink>
+       ))} 
+       {filteredCategories4.map(category => (
+       <NavLink className="grid-item grid-item-4 position-relative rounded mt-0 d-flex" to="/seaglass
+       ">
         
          <div className="content-absolute content-slide  overlay">
            <div className="container height-inherit d-flex">
              <div className="content-box banner-content p-4">
                <p className="heading_16 m-0 primary-color">New Arrivals</p>
-               <h2 className="heading_18">SEA GLASS</h2>
+               <h2 className="heading_18">{category.name}</h2>
                <span className="text_12 mt-2 link-underline d-block">SHOP
                  COLLECTION
                </span>
              </div>
            </div>
          </div>
-       </a>
+       </NavLink>
+       ))} 
      </div>
+   
+     
+
    </div>
  </div>
 </div>

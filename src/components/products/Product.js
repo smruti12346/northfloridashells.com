@@ -1,6 +1,23 @@
+import axios from 'axios';
 import React from 'react'
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 function Product() {
+  const [prodData, setprodData] = useState([]);
+console.log(prodData);
+  useEffect(() => {
+    fetchMenuData();
+  }, []);
+
+  const fetchMenuData = async () => {
+    try {
+      const response = await axios.get('https://shell-api.thecbdworld.org/wp-json/wc/v3/products/categories?per_page=100&_embed&consumer_key=ck_672d464c5c966e66b60fc489fe33bdfe66754ead&consumer_secret=cs_3b472ab453ca24462eb961f070474b7fb11b6318');
+      setprodData(response.data);
+    } catch (error) {
+      console.error('Error fetching menu data:', error);
+    }
+  };
   return (
     <React.Fragment>
       {/* breadcrumb start */}
@@ -65,12 +82,13 @@ function Product() {
                 </div>
                 <div className="collection-product-container">
                   <div className="row">
+                  {prodData.map((item) => (
                     <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
                       <div className="product-card">
                         <div className="product-card-img">
                           <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="assets/img/products/shell/DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES\Dried Real Craft Sponges.jpg" alt="product-img" />
-                            <img className="primary-img" height="353" src="assets/img/products/shell/DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES/Dried Real Craft Sponges.jpg" alt="product-img" />
+                            <img className="secondary-img" height="353" src={item.image['src']} alt="product-img" />
+                            <img className="primary-img" height="353" src={item.image['src']} alt="product-img" />
                           </a>
                           <div className="product-badge">
                             <span className="badge-label badge-percentage rounded">-44%</span>
@@ -96,7 +114,7 @@ function Product() {
                         <div className="product-card-details">
 
                           <h3 className="product-card-title text-center">
-                            <a href="collection-left-sidebar.html">Dried Real Craft Sponges</a>
+                            <a href="collection-left-sidebar.html">{item.name}</a>
                           </h3>
                           <div className="product-card-price text-center">
                             <span className="card-price-regular ">$8.95</span>
@@ -105,417 +123,10 @@ function Product() {
                         </div>
                       </div>
                     </div>
-                    <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
-                      <div className="product-card">
-                        <div className="product-card-img">
-                          <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="assets/img/products/shell/DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES/Florida Purple Barnacle Cluster.jpg" alt="product-img" />
-                            <img className="primary-img"  height="353" src="assets/img/products/shell/DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES/Florida Purple Barnacle Cluster.jpg" alt="product-img" />
-                          </a>
-                          <div className="product-card-action product-card-action-2 justify-content-center">
-                            <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
-                              <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-wishlist">
-                              <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-addtocart">
-                              <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="product-card-details">
-
-                          <h3 className="product-card-title text-center">
-                            <a href="collection-left-sidebar.html">Florida Purple Barnacle Cluster</a>
-                          </h3>
-                          <div className="product-card-price text-center">
-                            <span className="card-price-regular">$10.95</span>
-                           
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
-                      <div className="product-card">
-                        <div className="product-card-img">
-                          <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353"  src="assets/img/products/shell/10 Assorted Hermit Crab Shells.jpg" alt="product-img" />
-                            <img className="primary-img"  height="353" src="assets/img/products/shell/10 Assorted Hermit Crab Shells.jpg" alt="product-img" />
-                          </a>
-                          <div className="product-badge">
-                            <span className="badge-label badge-new rounded">New</span>
-                          </div>
-                          <div className="product-card-action product-card-action-2 justify-content-center">
-                            <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
-                              <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-wishlist">
-                              <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-addtocart">
-                              <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="product-card-details">
-
-                          <h3 className="product-card-title text-center">
-                            <a href="collection-left-sidebar.html">10 Assorted Hermit Crab Shells</a>
-                          </h3>
-                          <div className="product-card-price text-center">
-                            <span className="card-price-regular">$11.95</span>
-                           
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
-                      <div className="product-card">
-                        <div className="product-card-img">
-                          <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="assets/img/products/shell/red pipe coral.jpg" alt="product-img" />
-                            <img className="primary-img" height="353" src="assets/img/products/shell/red pipe coral.jpg" alt="product-img" />
-                          </a>
-                          <div className="product-card-action product-card-action-2 justify-content-center">
-                            <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
-                              <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-wishlist">
-                              <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-addtocart">
-                              <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="product-card-details">
-
-                          <h3 className="product-card-title text-center">
-                            <a href="collection-left-sidebar.html">Red pipe Coral Clusters</a>
-                          </h3>
-                          <div className="product-card-price text-center">
-                            <span className="card-price-regular">$19.95</span>
-                         
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
-                      <div className="product-card">
-                        <div className="product-card-img">
-                          <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img"  height="353" src="assets/img/products/shell/Reef Rock Coral.jpg" alt="product-img" />
-                            <img className="primary-img"  height="353" src="assets/img/products/shell/Reef Rock Coral.jpg" alt="product-img" />
-                          </a>
-                          <div className="product-card-action product-card-action-2 justify-content-center">
-                            <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
-                              <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-wishlist">
-                              <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-addtocart">
-                              <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="product-card-details">
-
-                          <h3 className="product-card-title text-center">
-                            <a href="collection-left-sidebar.html">Reef Rock Coral 5"+</a>
-                          </h3>
-                          <div className="product-card-price text-center">
-                            <span className="card-price-regular">$5.95</span>
-                           
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
-                      <div className="product-card">
-                        <div className="product-card-img">
-                          <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="assets/img/products/shell/mushcoral.jpg" alt="product-img" />
-                            <img className="primary-img" height="353" src="assets/img/products/shell/mushcoral.jpg" alt="product-img" />
-                          </a>
-                          <div className="product-card-action product-card-action-2 justify-content-center">
-                            <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
-                              <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-wishlist">
-                              <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-addtocart">
-                              <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="product-card-details">
-
-                          <h3 className="product-card-title text-center">
-                            <a href="collection-left-sidebar.html">White Mushroom Coral</a>
-                          </h3>
-                          <div className="product-card-price text-center">
-                            <span className="card-price-regular">$6.95</span>
-                          
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
-                      <div className="product-card">
-                        <div className="product-card-img">
-                          <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="assets/img/products/shell/whitecoralweb.jpg" alt="product-img" />
-                            <img className="primary-img" height="353" src="assets/img/products/shell/whitecoralweb.jpg" alt="product-img" />
-                          </a>
-                          <div className="product-card-action product-card-action-2 justify-content-center">
-                            <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
-                              <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-wishlist">
-                              <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-addtocart">
-                              <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="product-card-details">
-
-                          <h3 className="product-card-title text-center">
-                            <a href="collection-left-sidebar.html">White Coral Clusters</a>
-                          </h3>
-                          <div className="product-card-price text-center">
-                            <span className="card-price-regular">$32.95</span>
-                          
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
-                      <div className="product-card">
-                        <div className="product-card-img">
-                          <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img"  height="353" src="assets/img/products/shell/KNOBBY4INCH.jpg" alt="product-img" />
-                            <img className="primary-img"  height="353" src="assets/img/products/shell/KNOBBY4INCH.jpg" alt="product-img" />
-                          </a>
-                          <div className="product-card-action product-card-action-2 justify-content-center">
-                            <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
-                              <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-wishlist">
-                              <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-addtocart">
-                              <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="product-card-details">
-
-                          <h3 className="product-card-title text-center">
-                            <a href="collection-left-sidebar.html">Bulk Lots Natural Knobby Starfish</a>
-                          </h3>
-                          <div className="product-card-price text-center">
-                            <span className="card-price-regular">$8.95</span>
-                          
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
-                      <div className="product-card">
-                        <div className="product-card-img">
-                          <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="assets/img/products/shell/wsfknsd2.jpg" alt="product-img" />
-                            <img className="primary-img" height="353" src="assets/img/products/shell/wsfknsd2.jpg" alt="product-img" />
-                          </a>
-                          <div className="product-card-action product-card-action-2 justify-content-center">
-                            <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
-                              <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-wishlist">
-                              <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-addtocart">
-                              <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="product-card-details">
-
-                          <h3 className="product-card-title text-center">
-                            <a href="collection-left-sidebar.html">2" White Knobby</a>
-                          </h3>
-                          <div className="product-card-price text-center">
-                            <span className="card-price-regular">$7.95</span>
-                            
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
-                      <div className="product-card">
-                        <div className="product-card-img">
-                          <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="assets/img/products/shell/tigernaut.jpg" alt="product-img" />
-                            <img className="primary-img" height="353" src="assets/img/products/shell/tigernaut.jpg" alt="product-img" />
-                          </a>
-                          <div className="product-card-action product-card-action-2 justify-content-center">
-                            <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
-                              <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-wishlist">
-                              <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-addtocart">
-                              <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="product-card-details">
-
-                          <h3 className="product-card-title text-center">
-                            <a href="collection-left-sidebar.html">Tiger Nautilus Seashells</a>
-                          </h3>
-                          <div className="product-card-price text-center">
-                            <span className="card-price-regular">$36.95</span>
-                           
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
-                      <div className="product-card">
-                        <div className="product-card-img">
-                          <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="assets/img/products/shell/ramosus.jpg" alt="product-img" />
-                            <img className="primary-img" height="353" src="assets/img/products/shell/ramosus.jpg" alt="product-img" />
-                          </a>
-                          <div className="product-card-action product-card-action-2 justify-content-center">
-                            <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
-                              <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-wishlist">
-                              <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-addtocart">
-                              <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="product-card-details">
-
-                          <h3 className="product-card-title text-center">
-                            <a href="collection-left-sidebar.html">Murex Ramosus Display Hermit Crab Shells</a>
-                          </h3>
-                          <div className="product-card-price text-center">
-                            <span className="card-price-regular">$5.95</span>
-                           
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
-                      <div className="product-card">
-                        <div className="product-card-img">
-                          <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src="assets/img/products/shell/whitearks1132.jpg" alt="product-img" />
-                            <img className="primary-img" height="353" src="assets/img/products/shell/whitearks1132.jpg" alt="product-img" />
-                          </a>
-                          <div className="product-card-action product-card-action-2 justify-content-center">
-                            <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
-                              <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-wishlist">
-                              <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                            <a href="#" className="action-card action-addtocart">
-                              <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="product-card-details">
-                         
-                          <h3 className="product-card-title text-center">
-                            <a href="collection-left-sidebar.html">White Ark Shell</a>
-                          </h3>
-                          <div className="product-card-price text-center">
-                            <span className="card-price-regular">$5.95</span>
-                            
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  
+                    ))}
                   </div>
+                  
                 </div>
                 <div className="pagination justify-content-center mt-100">
                   <nav>
@@ -586,213 +197,17 @@ function Product() {
                     </div>
                     <div id="filter-collection" className="accordion-collapse collapse show">
                       <ul className="filter-lists list-unstyled mb-0">
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">DRIED BARNACLE AND SEA SPONGES</span>
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text"> BULK WHOLESALE LOT SPECIALS</span>
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">  CUT AND BANDED SHELLS</span>
 
-                          </label>
-                        </li>
-                        <li className="filter-item">
+                      {prodData.map((item) => (
+                        <li className="filter-item" key={item.ID}>
                           <label className="filter-label">
                             <input type="checkbox" />
                             <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text"> DISPLAY STANDS</span>
-
+                            <span className="filter-text">{item.name}</span>
                           </label>
                         </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text"> DRIED FISH, BLOW FISH</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">FLAT, CLAM, SCALLOP & PECTIN SHELLS</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">FREE SHIPPING</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">HERMIT CRAB SHELLS</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">LARGE SEASHELLS</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">MEDIUM SEASHELLS </span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">MUREX RAMOSUS</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">NAUTILUS SEASHELLS</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">NOVELTY SEA PRODUCTS</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">ROUND FLORIDA SAND DOLLARS</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">SEA FANS & CORAL</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">SEA GLASS</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">SEA LIFE LOTS</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">SEAHORSE</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">SEASHELL MIX - TINY, MEDIUM & LARGE</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">SEASHELLS</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">STARFISH</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">STARFISH & SAND DOLLARS</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">URCHINS</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">JEWELRY</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">SPECIALS</span>
-
-                          </label>
-                        </li>
-                        <li className="filter-item">
-                          <label className="filter-label">
-                            <input type="checkbox" />
-                            <span className="filter-checkbox rounded me-2" />
-                            <span className="filter-text">SHIPPING MATERIALS</span>
-
-                          </label>
-                        </li>
-
+                        
+ ))}
                       </ul>
                     </div>
                   </div>
@@ -980,3 +395,615 @@ function Product() {
 }
 
 export default Product
+
+// <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text"> BULK WHOLESALE LOT SPECIALS</span>
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">  CUT AND BANDED SHELLS</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text"> DISPLAY STANDS</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text"> DRIED FISH, BLOW FISH</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">FLAT, CLAM, SCALLOP & PECTIN SHELLS</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">FREE SHIPPING</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">HERMIT CRAB SHELLS</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">LARGE SEASHELLS</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">MEDIUM SEASHELLS </span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">MUREX RAMOSUS</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">NAUTILUS SEASHELLS</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">NOVELTY SEA PRODUCTS</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">ROUND FLORIDA SAND DOLLARS</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">SEA FANS & CORAL</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">SEA GLASS</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">SEA LIFE LOTS</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">SEAHORSE</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">SEASHELL MIX - TINY, MEDIUM & LARGE</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">SEASHELLS</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">STARFISH</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">STARFISH & SAND DOLLARS</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">URCHINS</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">JEWELRY</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">SPECIALS</span>
+
+//                           </label>
+//                         </li>
+//                         <li className="filter-item">
+//                           <label className="filter-label">
+//                             <input type="checkbox" />
+//                             <span className="filter-checkbox rounded me-2" />
+//                             <span className="filter-text">SHIPPING MATERIALS</span>
+
+//                           </label>
+//                         </li>
+
+// product area=================================
+// <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
+// <div className="product-card">
+//   <div className="product-card-img">
+//     <a className="hover-switch" href="collection-left-sidebar.html">
+//       <img className="secondary-img" height="353" src="assets/img/products/shell/DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES/Florida Purple Barnacle Cluster.jpg" alt="product-img" />
+//       <img className="primary-img"  height="353" src="assets/img/products/shell/DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES/Florida Purple Barnacle Cluster.jpg" alt="product-img" />
+//     </a>
+//     <div className="product-card-action product-card-action-2 justify-content-center">
+//       <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
+//         <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-wishlist">
+//         <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-addtocart">
+//         <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//     </div>
+//   </div>
+//   <div className="product-card-details">
+
+//     <h3 className="product-card-title text-center">
+//       <a href="collection-left-sidebar.html">Florida Purple Barnacle Cluster</a>
+//     </h3>
+//     <div className="product-card-price text-center">
+//       <span className="card-price-regular">$10.95</span>
+     
+//     </div>
+//   </div>
+// </div>
+// </div>
+// <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
+// <div className="product-card">
+//   <div className="product-card-img">
+//     <a className="hover-switch" href="collection-left-sidebar.html">
+//       <img className="secondary-img" height="353"  src="assets/img/products/shell/10 Assorted Hermit Crab Shells.jpg" alt="product-img" />
+//       <img className="primary-img"  height="353" src="assets/img/products/shell/10 Assorted Hermit Crab Shells.jpg" alt="product-img" />
+//     </a>
+//     <div className="product-badge">
+//       <span className="badge-label badge-new rounded">New</span>
+//     </div>
+//     <div className="product-card-action product-card-action-2 justify-content-center">
+//       <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
+//         <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-wishlist">
+//         <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-addtocart">
+//         <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//     </div>
+//   </div>
+//   <div className="product-card-details">
+
+//     <h3 className="product-card-title text-center">
+//       <a href="collection-left-sidebar.html">10 Assorted Hermit Crab Shells</a>
+//     </h3>
+//     <div className="product-card-price text-center">
+//       <span className="card-price-regular">$11.95</span>
+     
+//     </div>
+//   </div>
+// </div>
+// </div>
+// <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
+// <div className="product-card">
+//   <div className="product-card-img">
+//     <a className="hover-switch" href="collection-left-sidebar.html">
+//       <img className="secondary-img" height="353" src="assets/img/products/shell/red pipe coral.jpg" alt="product-img" />
+//       <img className="primary-img" height="353" src="assets/img/products/shell/red pipe coral.jpg" alt="product-img" />
+//     </a>
+//     <div className="product-card-action product-card-action-2 justify-content-center">
+//       <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
+//         <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-wishlist">
+//         <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-addtocart">
+//         <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//     </div>
+//   </div>
+//   <div className="product-card-details">
+
+//     <h3 className="product-card-title text-center">
+//       <a href="collection-left-sidebar.html">Red pipe Coral Clusters</a>
+//     </h3>
+//     <div className="product-card-price text-center">
+//       <span className="card-price-regular">$19.95</span>
+   
+//     </div>
+//   </div>
+// </div>
+// </div>
+// <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
+// <div className="product-card">
+//   <div className="product-card-img">
+//     <a className="hover-switch" href="collection-left-sidebar.html">
+//       <img className="secondary-img"  height="353" src="assets/img/products/shell/Reef Rock Coral.jpg" alt="product-img" />
+//       <img className="primary-img"  height="353" src="assets/img/products/shell/Reef Rock Coral.jpg" alt="product-img" />
+//     </a>
+//     <div className="product-card-action product-card-action-2 justify-content-center">
+//       <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
+//         <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-wishlist">
+//         <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-addtocart">
+//         <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//     </div>
+//   </div>
+//   <div className="product-card-details">
+
+//     <h3 className="product-card-title text-center">
+//       <a href="collection-left-sidebar.html">Reef Rock Coral 5"+</a>
+//     </h3>
+//     <div className="product-card-price text-center">
+//       <span className="card-price-regular">$5.95</span>
+     
+//     </div>
+//   </div>
+// </div>
+// </div>
+// <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
+// <div className="product-card">
+//   <div className="product-card-img">
+//     <a className="hover-switch" href="collection-left-sidebar.html">
+//       <img className="secondary-img" height="353" src="assets/img/products/shell/mushcoral.jpg" alt="product-img" />
+//       <img className="primary-img" height="353" src="assets/img/products/shell/mushcoral.jpg" alt="product-img" />
+//     </a>
+//     <div className="product-card-action product-card-action-2 justify-content-center">
+//       <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
+//         <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-wishlist">
+//         <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-addtocart">
+//         <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//     </div>
+//   </div>
+//   <div className="product-card-details">
+
+//     <h3 className="product-card-title text-center">
+//       <a href="collection-left-sidebar.html">White Mushroom Coral</a>
+//     </h3>
+//     <div className="product-card-price text-center">
+//       <span className="card-price-regular">$6.95</span>
+    
+//     </div>
+//   </div>
+// </div>
+// </div>
+// <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
+// <div className="product-card">
+//   <div className="product-card-img">
+//     <a className="hover-switch" href="collection-left-sidebar.html">
+//       <img className="secondary-img" height="353" src="assets/img/products/shell/whitecoralweb.jpg" alt="product-img" />
+//       <img className="primary-img" height="353" src="assets/img/products/shell/whitecoralweb.jpg" alt="product-img" />
+//     </a>
+//     <div className="product-card-action product-card-action-2 justify-content-center">
+//       <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
+//         <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-wishlist">
+//         <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-addtocart">
+//         <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//     </div>
+//   </div>
+//   <div className="product-card-details">
+
+//     <h3 className="product-card-title text-center">
+//       <a href="collection-left-sidebar.html">White Coral Clusters</a>
+//     </h3>
+//     <div className="product-card-price text-center">
+//       <span className="card-price-regular">$32.95</span>
+    
+//     </div>
+//   </div>
+// </div>
+// </div>
+// <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
+// <div className="product-card">
+//   <div className="product-card-img">
+//     <a className="hover-switch" href="collection-left-sidebar.html">
+//       <img className="secondary-img"  height="353" src="assets/img/products/shell/KNOBBY4INCH.jpg" alt="product-img" />
+//       <img className="primary-img"  height="353" src="assets/img/products/shell/KNOBBY4INCH.jpg" alt="product-img" />
+//     </a>
+//     <div className="product-card-action product-card-action-2 justify-content-center">
+//       <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
+//         <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-wishlist">
+//         <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-addtocart">
+//         <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//     </div>
+//   </div>
+//   <div className="product-card-details">
+
+//     <h3 className="product-card-title text-center">
+//       <a href="collection-left-sidebar.html">Bulk Lots Natural Knobby Starfish</a>
+//     </h3>
+//     <div className="product-card-price text-center">
+//       <span className="card-price-regular">$8.95</span>
+    
+//     </div>
+//   </div>
+// </div>
+// </div>
+// <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
+// <div className="product-card">
+//   <div className="product-card-img">
+//     <a className="hover-switch" href="collection-left-sidebar.html">
+//       <img className="secondary-img" height="353" src="assets/img/products/shell/wsfknsd2.jpg" alt="product-img" />
+//       <img className="primary-img" height="353" src="assets/img/products/shell/wsfknsd2.jpg" alt="product-img" />
+//     </a>
+//     <div className="product-card-action product-card-action-2 justify-content-center">
+//       <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
+//         <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-wishlist">
+//         <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-addtocart">
+//         <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//     </div>
+//   </div>
+//   <div className="product-card-details">
+
+//     <h3 className="product-card-title text-center">
+//       <a href="collection-left-sidebar.html">2" White Knobby</a>
+//     </h3>
+//     <div className="product-card-price text-center">
+//       <span className="card-price-regular">$7.95</span>
+      
+//     </div>
+//   </div>
+// </div>
+// </div>
+// <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
+// <div className="product-card">
+//   <div className="product-card-img">
+//     <a className="hover-switch" href="collection-left-sidebar.html">
+//       <img className="secondary-img" height="353" src="assets/img/products/shell/tigernaut.jpg" alt="product-img" />
+//       <img className="primary-img" height="353" src="assets/img/products/shell/tigernaut.jpg" alt="product-img" />
+//     </a>
+//     <div className="product-card-action product-card-action-2 justify-content-center">
+//       <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
+//         <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-wishlist">
+//         <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-addtocart">
+//         <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//     </div>
+//   </div>
+//   <div className="product-card-details">
+
+//     <h3 className="product-card-title text-center">
+//       <a href="collection-left-sidebar.html">Tiger Nautilus Seashells</a>
+//     </h3>
+//     <div className="product-card-price text-center">
+//       <span className="card-price-regular">$36.95</span>
+     
+//     </div>
+//   </div>
+// </div>
+// </div>
+// <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
+// <div className="product-card">
+//   <div className="product-card-img">
+//     <a className="hover-switch" href="collection-left-sidebar.html">
+//       <img className="secondary-img" height="353" src="assets/img/products/shell/ramosus.jpg" alt="product-img" />
+//       <img className="primary-img" height="353" src="assets/img/products/shell/ramosus.jpg" alt="product-img" />
+//     </a>
+//     <div className="product-card-action product-card-action-2 justify-content-center">
+//       <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
+//         <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-wishlist">
+//         <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-addtocart">
+//         <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//     </div>
+//   </div>
+//   <div className="product-card-details">
+
+//     <h3 className="product-card-title text-center">
+//       <a href="collection-left-sidebar.html">Murex Ramosus Display Hermit Crab Shells</a>
+//     </h3>
+//     <div className="product-card-price text-center">
+//       <span className="card-price-regular">$5.95</span>
+     
+//     </div>
+//   </div>
+// </div>
+// </div>
+// <div className="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-duration={700}>
+// <div className="product-card">
+//   <div className="product-card-img">
+//     <a className="hover-switch" href="collection-left-sidebar.html">
+//       <img className="secondary-img" height="353" src="assets/img/products/shell/whitearks1132.jpg" alt="product-img" />
+//       <img className="primary-img" height="353" src="assets/img/products/shell/whitearks1132.jpg" alt="product-img" />
+//     </a>
+//     <div className="product-card-action product-card-action-2 justify-content-center">
+//       <a href="#quickview-modal" className="action-card action-quickview" data-bs-toggle="modal">
+//         <svg width={26} height={26} viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-wishlist">
+//         <svg className="icon icon-wishlist" width={26} height={22} viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//       <a href="#" className="action-card action-addtocart">
+//         <svg className="icon icon-cart" width={24} height={26} viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D" />
+//         </svg>
+//       </a>
+//     </div>
+//   </div>
+//   <div className="product-card-details">
+   
+//     <h3 className="product-card-title text-center">
+//       <a href="collection-left-sidebar.html">White Ark Shell</a>
+//     </h3>
+//     <div className="product-card-price text-center">
+//       <span className="card-price-regular">$5.95</span>
+      
+//     </div>
+//   </div>
+// </div>
+// </div>

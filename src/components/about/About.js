@@ -23,8 +23,9 @@ function About() {
   return (
    
     <React.Fragment>
-    <h2>{aboutData.title.rendered}</h2>
-    <div dangerouslySetInnerHTML={{ __html: aboutData.content.rendered }} />
+  
+    
+    
     
     {/* breadcrumb start */}
     

@@ -1,5 +1,5 @@
 
-import Navbar from './Navbar'
+
 import BannerCarousel from './BannerCarousel'
 import Navs from './Navs';
 import React, { useState, useEffect } from 'react';
@@ -32,4 +32,3 @@ function Header() {
 }
 
 export default Header
-// <Navs/>

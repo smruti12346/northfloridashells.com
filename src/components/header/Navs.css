@@ -75,8 +75,11 @@ li {
 }
 
 .menu-link ul li a {
-  color: rgba(0, 0, 3, 0.8);
-  transition: 0.5s;
+ 
+  color: rgba(0, 0, 3, 0.7);
+    transition: 0.5s;
+    font-size: 19px;
+    font-weight: 600;
 }
 .menu-link ul li:hover > a {
   transform-origin: left;

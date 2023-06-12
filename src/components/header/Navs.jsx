@@ -118,7 +118,7 @@ const Navs = ({ menuData }) => {
   <ul>
   {menuData.map((item) => (
     <li key={item.ID}>
-      <a href={item.url}>{item.title}</a>
+      <NavLink to={item.url}>{item.title}</NavLink>
     </li>
   ))}
 </ul>
