@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './ImageSlider2.css';
-
+import { img_url } from '../../Auth';
 const ImageSliderCard2 = () => {
   const settings = {
     dots: false,
@@ -43,37 +43,37 @@ const ImageSliderCard2 = () => {
     <Slider {...settings}>
     <div className='card-menu'>
       <div className="card  " >
-        <img src="assets/img/products/shell/resize/img2.png" alt="Image 1" />
+        <img src={`${img_url}/products/shell/resize/img2.png`} alt="Image 1" />
         
       </div>
       </div>
       <div className='card-menu'>
       <div className="card  ">
-        <img src="assets/img/products/shell/resize/10-Assorted-Hermit-Crab-Shells.png" alt="Image 2" />
+        <img src={`${img_url}/products/shell/resize/10-Assorted-Hermit-Crab-Shells.png`} alt="Image 2" />
         
       </div>
       </div>
       <div className='card-menu'>
       <div className="card  ">
-      <img src="assets/img/products/shell/resize/seafans.png" alt="Image 3" />
+      <img src={`${img_url}/products/shell/resize/seafans.png`} alt="Image 3" />
       
     </div>
     </div>
     <div className='card-menu'>
     <div className="card  ">
-    <img src="assets/img/products/shell/BAKING SCALLOP CLAMS SEAFOOD COOKING SHELLS.jpg" alt="Image 4" />
+    <img src={`${img_url}/products/shell/BAKING SCALLOP CLAMS SEAFOOD COOKING SHELLS.jpg`} alt="Image 4" />
     
   </div>
   </div>
   <div className='card-menu'>
   <div className="card ">
-  <img src="assets/img/products/shell/30+ Assorted Hermit Crab Shells.jpg" alt="Image 5" />
+  <img src={`${img_url}/products/shell/30+ Assorted Hermit Crab Shells.jpg`} alt="Image 5" />
  
 </div>
 </div>
 <div className='card-menu'>
 <div className="card  ">
-<img src="assets/img/products/shell/Reef Rock Coral.jpg" alt="Image 6" />
+<img src={`${img_url}/products/shell/Reef Rock Coral.jpg`}  alt="Image 6" />
 
 </div>
 </div>

@@ -3,6 +3,7 @@ import ImageSliderCard from './ImageSliderCard'
 import ImageSliderCard2 from './ImageSlider2'
 import './home.css';
 import axios from 'axios';
+import { img_url } from '../../Auth';
 import { NavLink } from 'react-router-dom';
 
 
@@ -118,7 +119,7 @@ function Home() {
        </NavLink>
        ))} 
        {filteredCategories4.map(category => (
-       <NavLink className="grid-item grid-item-4 position-relative rounded mt-0 d-flex" to="/seaglass
+       <NavLink className="grid-item grid-item-5 position-relative rounded mt-0 d-flex" to="/seaglass
        ">
         
          <div className="content-absolute content-slide  overlay">
@@ -155,8 +156,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                      <img className="secondary-img" src="assets/img/products/shell/Aqua Blue Teal and Ice Mix Sea Glass.jpg" alt="product-img" />
-                      <img className="primary-img" src="assets/img\products/shell/Aqua Blue Teal and Ice Mix Sea Glass.jpg" alt="product-img" />
+                      <img className="secondary-img" src={`${img_url}/products/shell/Aqua Blue Teal and Ice Mix Sea Glass.jpg`} alt="product-img" />
+                      <img className="primary-img" src={`${img_url}/products/shell/Aqua Blue Teal and Ice Mix Sea Glass.jpg`} alt="product-img" />
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>
@@ -182,8 +183,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                      <img className="secondary-img" src="assets/img/products/shell/resize/img1.png" alt="product-img" />
-                      {<img className="primary-img" src="assets/img/products/shell/resize/img1.png" alt="product-img" />}
+                      <img className="secondary-img" src={`${img_url}/products/shell/resize/img1.png`} alt="product-img" />
+                      {<img className="primary-img" src={`${img_url}/products/shell/resize/img1.png`}  alt="product-img" />}
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>
@@ -209,8 +210,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                      <img className="secondary-img" src="assets/img/products/shell/resize/White-Knobby-Starfish.png" alt="product-img" />
-                      <img className="primary-img" src="assets/img/products/shell/resize/White-Knobby-Starfish.png" alt="product-img" />
+                      <img className="secondary-img" src={`${img_url}/products/shell/resize/White-Knobby-Starfish.png`}  alt="product-img" />
+                      <img className="primary-img" src={`${img_url}/products/shell/resize/White-Knobby-Starfish.png`} alt="product-img" />
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>
@@ -236,8 +237,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                        <img className="secondary-img" src="assets/img/products/shell/resize/Sugar-Starfish-Dried.png" alt="product-img" />
-                        <img className="primary-img" src="assets/img/products/shell/resize/Sugar-Starfish-Dried.png" alt="product-img" />
+                        <img className="secondary-img" src= {`${img_url}/products/shell/resize/Sugar-Starfish-Dried.png`} alt="product-img" />
+                        <img className="primary-img" src={`${img_url}/products/shell/resize/Sugar-Starfish-Dried.png`} alt="product-img" />
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>
@@ -262,8 +263,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                        <img className="secondary-img" src="assets/img/products/shell/resize/Among-pearl-pong-trochus-Shells.png" alt="product-img" />
-                        <img className="primary-img" src="assets/img/products/shell/resize/Among-pearl-pong-trochus-Shells.png" alt="product-img" />
+                        <img className="secondary-img" src={`${img_url}/products/shell/resize/Among-pearl-pong-trochus-Shells.png`} alt="product-img" />
+                        <img className="primary-img" src={`${img_url}/products/shell/resize/Among-pearl-pong-trochus-Shells.png`} alt="product-img" />
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>
@@ -288,8 +289,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                        <img className="secondary-img" src="assets/img/products/shell/resize/Alphonso-Urchins-Dried.png" alt="product-img" />
-                        <img className="primary-img" src="assets/img/products/shell/resize/Alphonso-Urchins-Dried.png" alt="product-img" />
+                        <img className="secondary-img" src={`${img_url}/products/shell/resize/Alphonso-Urchins-Dried.png`} alt="product-img" />
+                        <img className="primary-img" src={`${img_url}/products/shell/resize/Alphonso-Urchins-Dried.png`} alt="product-img" />
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>
@@ -314,8 +315,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                        <img className="secondary-img" src="assets/img/products/shell/resize/img2.png" alt="product-img" />
-                        <img className="primary-img" src="assets/img/products/shell/resize/img2.png" alt="product-img" />
+                        <img className="secondary-img" src={`${img_url}/products/shell/resize/img2.png`} alt="product-img" />
+                        <img className="primary-img" src={`${img_url}/products/shell/resize/img2.png`}alt="product-img" />
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>
@@ -340,8 +341,8 @@ function Home() {
                   <div className="product-card">
                     <div className="product-card-img">
                       <a className="hover-switch" href="collection-left-sidebar.html">
-                        <img className="secondary-img" src="assets/img/products/shell/resize/rufa.png" alt="product-img" />
-                        <img className="primary-img" src="assets/img/products/shell/resize/rufa.png" alt="product-img" />
+                        <img className="secondary-img" src={`${img_url}/products/shell/resize/rufa.png`} alt="product-img" />
+                        <img className="primary-img" src={`${img_url}/products/shell/resize/rufa.png`} alt="product-img" />
                       </a>
                       <div className="product-card-action product-card-action-2">
                         <a href="#quickview-modal" className="quickview-btn btn-primary" data-bs-toggle="modal">QUICKVIEW</a>
@@ -568,7 +569,7 @@ function Home() {
                   </div>
                   <div className="col-lg-6 col-12">
                     <div className="newsletter-image">
-                      <img src="assets/img/slideshow/shbg6.jpg" alt="img" />
+                      <img src={`${img_url}/slideshow/shbg6.jpg`} alt="img" />
                     </div>
                   </div>
                 </div>

@@ -1,0 +1,1 @@
+export const img_url="/shell/assets/img";

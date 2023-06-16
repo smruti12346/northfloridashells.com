@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './ImageSliderCard.css';
+import { img_url } from '../../Auth';
 
 const ImageSliderCard = () => {
   const settings = {
@@ -42,7 +43,7 @@ const ImageSliderCard = () => {
     <Slider {...settings}>
     <div className='card-menu'>
       <div className="card article-card " >
-        <img src="assets/img/products/shell/Sugar Starfish Dried.jpg" alt="Image 1" />
+        <img src={`${img_url}/products/shell/Sugar Starfish Dried.jpg`}  alt="Image 1" />
         <div className="description">
           <h3>Card 1</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis porro voluptatibus provident reiciendis incidunt et eaque rem veniam enim necessitatibus.</p>
@@ -51,7 +52,7 @@ const ImageSliderCard = () => {
       </div>
       <div className='card-menu'>
       <div className="card article-card ">
-        <img src="assets/img/products/shell/10 Assorted Hermit Crab Shells.jpg" alt="Image 2" />
+        <img src={`${img_url}/products/shell/10 Assorted Hermit Crab Shells.jpg`} alt="Image 2" />
         <div className="description">
           <h3>Card 2</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis porro voluptatibus provident reiciendis incidunt et eaque rem veniam enim necessitatibus.</p>
@@ -60,7 +61,7 @@ const ImageSliderCard = () => {
       </div>
       <div className='card-menu'>
       <div className="card article-card ">
-      <img src="assets/img/products/shell/Fernandezi Snail Hermit Crab shells.jpg" alt="Image 2" />
+      <img src={`${img_url}/products/shell/Fernandezi Snail Hermit Crab shells.jpg`} alt="Image 2" />
       <div className="description">
         <h3>Card 2</h3>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis porro voluptatibus provident reiciendis incidunt et eaque rem veniam enim necessitatibus.</p>
@@ -69,7 +70,7 @@ const ImageSliderCard = () => {
     </div>
     <div className='card-menu'>
     <div className="card article-card ">
-    <img src="assets/img/products/shell/Irish Flat Scallop Shells.jpg" alt="Image 2" />
+    <img src={`${img_url}/products/shell/Irish Flat Scallop Shells.jpg`} alt="Image 2" />
     <div className="description">
       <h3>Card 2</h3>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis porro voluptatibus provident reiciendis incidunt et eaque rem veniam enim necessitatibus.</p>
@@ -78,7 +79,7 @@ const ImageSliderCard = () => {
   </div>
   <div className='card-menu'>
   <div className="card article-card ">
-  <img src="assets/img/products/shell/BAKING SCALLOP CLAMS SEAFOOD COOKING SHELLS.jpg" alt="Image 2" />
+  <img src={`${img_url}/products/shell/BAKING SCALLOP CLAMS SEAFOOD COOKING SHELLS.jpg`} alt="Image 2" />
   <div className="description">
     <h3>Card 2</h3>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis porro voluptatibus provident reiciendis incidunt et eaque rem veniam enim necessitatibus.</p>
@@ -87,7 +88,7 @@ const ImageSliderCard = () => {
 </div>
 <div className='card-menu'>
 <div className="card article-card ">
-<img src="assets/img/products/shell/DEER COWRIE CYPRAEA VITELLUS.jpg" alt="Image 2" />
+<img src={`${img_url}/products/shell/DEER COWRIE CYPRAEA VITELLUS.jpg`}alt="Image 2" />
 <div className="description">
   <h3>Card 2</h3>
   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis porro voluptatibus provident reiciendis incidunt et eaque rem veniam enim necessitatibus.</p>

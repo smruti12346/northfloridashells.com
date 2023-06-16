@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 function Product() {
   const [prodData, setprodData] = useState([]);
+  const [imageURL, setImageURL] = useState('');
 console.log(prodData);
   useEffect(() => {
     fetchMenuData();
@@ -87,8 +88,9 @@ console.log(prodData);
                       <div className="product-card">
                         <div className="product-card-img">
                           <a className="hover-switch" href="collection-left-sidebar.html">
-                            <img className="secondary-img" height="353" src={item.image['src']} alt="product-img" />
-                            <img className="primary-img" height="353" src={item.image['src']} alt="product-img" />
+                          <img className="secondary-img" height="353" src="assets/img/products/shell/DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES/Dried Real Craft Sponges.jpg" alt="product-img" />
+                                <img className="primary-img" height="353" src="assets/img/products/shell/DRIED BARNACLE, TUBE SPONGES AND SEA SPONGES/Dried Real Craft Sponges.jpg" alt="product-img" />
+                         
                           </a>
                           <div className="product-badge">
                             <span className="badge-label badge-percentage rounded">-44%</span>
